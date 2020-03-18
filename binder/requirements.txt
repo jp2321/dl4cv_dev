@@ -1,0 +1,4 @@
+wasabi>=0.2.1,<1.1.0
+tensorflow>=2.0
+pandas
+opencv-python

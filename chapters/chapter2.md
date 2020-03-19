@@ -8,6 +8,36 @@ type: chapter
 id: 2
 ---
 
+<exercise id="3" title="Images for a computer" type="slides">
+
+<slides source="chapter2_01_images">
+</slides>
+
+</exercise>
+
+<exercise id="4" title="Arrays">
+<choice>
+<opt text="Images are n-dimensional arrays for the computer" correct="true">
+
+Correct!
+
+</opt>
+
+<opt text="Values range from 0 to 1 million for each pixel">
+
+This is not the correct answer
+
+</opt>
+
+<opt text="Black and white images and colored images have the same number of channels">
+
+This is not correct either.
+
+</opt>
+</choice>
+
+</exercise>
+
 <exercise id="7" title="Adv things">
 
 Let's ask some questions about the slides. Whats the correct answer?

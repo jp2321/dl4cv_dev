@@ -1,39 +1,56 @@
 ---
 type: slides
 ---
-
-# Introduction
-
-Notes: Text at the end of a slide prefixed like this will be displayed as
-speaker notes on the side. Slides can be separated with a divider: ---.
+# Intro to computer vision
 
 ---
 
-# This is a slide
+# Computer vision applications
 
-```python
-# Print something
-print("Hello world")
-```
+Computer vision is an interdisciplinary field to focuses on how computers can understand, rate, classify images and videos.
+Therefore it focus on image preprocessing and feature extracting. 
 
-```out
-Hello world
-```
+Often techniques like from deep learning are used to create artifical applications. 
 
-- Slides can have code, bullet points, tables and pretty much all other Markdown
-  elements.
-- This is another bullet point.
+There are different typical applications for computer vision:
 
-<img src="profile.jpg" alt="This image is in /static" width="25%">
-
-Notes: Some more notes go here
+- image classification
+- object detection
+- image segmentation
+- video classification & segmentation 
 
 ---
 
-# Let's practice!
+# Image classification
 
-Notes: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique
-libero at est congue, sed vestibulum tortor laoreet. Aenean egestas massa non
-commodo consequat. Curabitur faucibus, sapien vitae euismod imperdiet, arcu erat
-semper urna, in accumsan sapien dui ac mi. Pellentesque felis lorem, semper nec
-velit nec, consectetur placerat enim.
+<img src="vl1/predict-dog.png" alt="This image is in /static" width="90%">
+
+Notes: Image classification focuses on categorizing the complete image. There can be binary classifications dog yes/no or multi-class applications. One famous one is the image-net challenge where images are classified into 1000 different classes.
+
+---
+
+# Object detection
+
+<img src="vl1/object_detection.jpg" alt="This image is in /static" width="90%">
+
+Notes: In object detection the aim is to find different objects in an image. It is typically used in autonomous driving to detect other cars, pedastrians or cyclist. Therefore, not only the class of the object but also the regions where it was detected is from interest. Consequently, also a bounding box around the object needs to be predicted with the corresponding object class.
+
+---
+
+# Image segmentation
+
+<img src="vl1/img_seg.jpg" alt="This image is in /static" width="90%">
+
+Notes: Image segmentation is another wide spread application in computer vision. Special training data is needed, on the one hand a normal image, on the other hand the segmented image. In the segmented image, each pixel is labeled into a specific class. Classes could be side-walk, street, cars etc. The aim of this application is to predict for images the pixel classes as accurate as possible. 
+
+---
+
+# Video classification & segmentation
+
+<img src="vl1/youtube8k.png" alt="This image is in /static" width="90%">
+
+Notes: The previous applications can not only be performed on static images but also in videos. A video is roughly speaking nothing else than x-images per second. Without being able to perform video analysis a lot of modern business applications were not been implemented.
+
+---
+
+# Let's get started!

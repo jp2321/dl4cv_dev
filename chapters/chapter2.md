@@ -47,7 +47,7 @@ This is not correct either.
 
 <exercise id="6" title="Hands on">
 
-Read the dog.jpeg image from disk.
+Read the dog.jpeg image from disk. It is in the exercise folder.
 First read it as black and white image, second as colored image.
 Display both image with the right color setting.
 

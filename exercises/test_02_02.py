@@ -5,8 +5,8 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    assert (183,275) in bw_image.shape, "Are you using black and white image"
-    assert (183,275,3) in bw_image.shape, "Are you using a colored image"
+    assert (183,275) == np.array(bw_img).shape, "Are you using black and white image?"
+    assert 3 == np.array(color_img).shape[2], "Are you using a colored image?"
     
 
     __msg__.good("Well done!")

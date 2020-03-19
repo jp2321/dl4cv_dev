@@ -1,4 +1,8 @@
 from tensorflow.keras.datasets import fashion_mnist
+from tensorflow.keras import layers, models
+import numpy as np
+import pandas as pd 
+
 (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data()
 categories = pd.Series(y_train)
 selected = categories[(categories.values == 0) | (categories.values) == 1].index

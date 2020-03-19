@@ -45,7 +45,7 @@ This is not correct either.
 </slides>
 </exercise>
 
-<exercise id="6" title="Hands on">
+<exercise id="6" title="Hands on image reading">
 
 Read the dog.jpeg image from disk. It is in the exercise folder.
 First read it as black and white image, second as colored image.
@@ -58,7 +58,20 @@ Specifiy the colorchange for the colored image.
 </codeblock>
 </exercise>
 
-<exercise id="7" title="Test">
+<exercise id="7" title="Hands on slicing and dicing">
+
+As the image is a numpy array, one can "slice and dice" the image in an easy fashion.
+Dice the dog image so that it shows the height from 81 to 127's pixel and the width of the 49's to 107 pixels with all color channels.
+
+<codeblock id="02_02_1">
+
+Slice and dice via the index of the array. Rember it starts by zero
+
+</codeblock>
+</exercise>
+
+
+<exercise id="111" title="Test">
 
 <codeblock id="02_03">
 	Hint

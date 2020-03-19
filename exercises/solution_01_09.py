@@ -1,2 +1,3 @@
-import tensorflow as tf 
-import pandas as pd 
+import pandas as pd
+
+pd.read_csv("test.csv")

@@ -1,7 +1,7 @@
 ---
-title: 'Chapter 2: Advanced things'
+title: 'Chapter 2: From Black and white to color'
 description:
-  'Here you will learn advanced things'
+  'This chapter will introduce different image manipulation techniques about the colorcoded image'
 prev: /chapter1
 next: /chapterend
 type: chapter
@@ -55,6 +55,13 @@ Display both image with the right color setting.
 
 Specifiy the colorchange for the colored image.
 
+</codeblock>
+</exercise>
+
+<exercise id="7" title="Test">
+
+<codeblock id="02_03">
+	Hint
 </codeblock>
 </exercise>
 

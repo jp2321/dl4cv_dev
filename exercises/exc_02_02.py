@@ -9,6 +9,6 @@ plt.show()
 
 color_img = cv2.imread(______,_______)
 print(color_img.shape)
-color_img = cv2.cvtColor(________, _______)
-plt.imshow(color_img)
+transformed_img = cv2.cvtColor(________, _______)
+plt.imshow(transformed_img)
 plt.show()

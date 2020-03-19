@@ -38,40 +38,14 @@ This is not correct either.
 
 </exercise>
 
-<exercise id="7" title="Adv things">
 
-Let's ask some questions about the slides. Whats the correct answer?
+<exercise id="5" title="Coding" type="slides">
 
-<choice>
-<opt text="Answer one">
-
-This is not the correct answer.
-
-</opt>
-
-<opt text="Answer two" correct="true">
-
-Good job!
-
-</opt>
-
-<opt text="Answer three">
-
-This is not correct either.
-
-</opt>
-</choice>
-
-</exercise>
-
-<exercise id="8" title="Test" type="slides">
-
-<slides source="chapter1_01_introduction">
+<slides source="chapter2_02_coding">
 </slides>
-
 </exercise>
 
-<exercise id="9" title="Your code">
+<exercise id="6" title="Your code">
 
 This is a code exercise. The content can be formatted in simple Markdown – so
 you can have **bold text**, `code` or [links](https://spacy.io) or lists, like
@@ -86,3 +60,5 @@ the one for the instructions below.
 This is a hint.
 
 </codeblock>
+</exercise>
+

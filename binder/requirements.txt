@@ -1,8 +1,6 @@
 wasabi>=0.2.1,<1.1.0
 numpy
-<<<<<<< HEAD
 matplotlib
-=======
 pandas
->>>>>>> binder
+binder
 opencv-python

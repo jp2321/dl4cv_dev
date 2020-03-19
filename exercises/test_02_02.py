@@ -5,7 +5,8 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    assert "print(DATA[0])" in __solution__, "Are you printing the first record?"
-    assert some_var == len(DATA), "Are you getting the correct length?"
+    assert (183,275) in bw_image.shape, "Are you using black and white image"
+    assert (183,275,3) in bw_image.shape, "Are you using a colored image"
+    
 
     __msg__.good("Well done!")

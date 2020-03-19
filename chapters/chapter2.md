@@ -45,19 +45,15 @@ This is not correct either.
 </slides>
 </exercise>
 
-<exercise id="6" title="Your code">
+<exercise id="6" title="Hands on">
 
-This is a code exercise. The content can be formatted in simple Markdown – so
-you can have **bold text**, `code` or [links](https://spacy.io) or lists, like
-the one for the instructions below.
+Read the dog.jpeg image from disk.
+First read it as black and white image, second as colored image.
+Display both image with the right color setting.
 
-- These are instructions and they can have bullet points.
-- The code block below will look for the files `exc_01_03`, `solution_01_03` and
-  `test_01_03` in `/exercises`.
+<codeblock id="02_02">
 
-<codeblock id="01_09">
-
-This is a hint.
+Specifiy the colorchange for the colored image.
 
 </codeblock>
 </exercise>

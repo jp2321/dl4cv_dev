@@ -2,5 +2,4 @@ wasabi>=0.2.1,<1.1.0
 numpy
 matplotlib
 pandas
-binder
 opencv-python

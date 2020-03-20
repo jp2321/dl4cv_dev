@@ -181,33 +181,10 @@ This is not correct either.
 </slides>
 </exercise>
 
-
-<exercise id="16" title="HoG Feature calculation">
-Given is the dog images resized to 300 by 300 pixels.
-Calculate how many hog features are derived when, cells per block are 3, pixels per cell are 8 and bins are 15.
-
-<choice>
-<opt text="When the minimum value is smaller the edges are stronger">
-
-This is not the correct answer
-
-</opt>
-
-<opt text="When the maximum value is smaller the edges are stronger">
-
-This is not the correct answer
-
-</opt>
-
-<opt text="Using a higher value for the minimum and maximum boundery results in less but stronger edges" correct="true">
-
-Correct!
-
-</opt>
-</choice>
-
-<exercise id="17" title="Exercise HoG">
-
+<exercise id="16" title="Exercise HoG">
+ Transform the dog image into hog features.
+ Rescale it to 300 by 300 pixels. Use 5 orientations, 8 by 8 pixels per cell and 2 by 2 cells per block
+ 
 <codeblock id="02_04">
 	Hint
 </codeblock>

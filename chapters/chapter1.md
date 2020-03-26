@@ -1,7 +1,7 @@
 ---
-title: 'Chapter 1: What is an image?'
+title: 'Chapter 1: Computer Vision overview'
 description:
-  'This chapter will give an overview what an image is'
+  'This chapter will give an overview about computer vision'
 prev: null
 next: /chapter2
 type: chapter

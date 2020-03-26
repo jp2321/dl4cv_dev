@@ -1,9 +1,9 @@
 ---
-title: 'Chapter 2: From Black and white to color'
+title: 'Chapter 2: From black and white to color ...'
 description:
-  'This chapter will introduce different image manipulation techniques about the colorcoded image'
+  'This chapter will introduce different image manipulation techniques'
 prev: /chapter1
-next: /chapterend
+next: /chapter2
 type: chapter
 id: 2
 ---

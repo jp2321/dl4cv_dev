@@ -18,7 +18,7 @@ Source: Srivastava et al. (2014)
 
 Note:
 
-The idea of dropout is very simple: For each mini-batch in the training process, a random proportion of the neurons are "dropped out". This means, in the forward process, these neuron outputs are not considered as the input of the next layer. Moreover, during backpropagation, the weights of the neurons will not be updated. Dropout simulates the behavior of training multiple versions of the network, which would be computationally expensive if these would be done by hand. Dropout prevents models from overfitting, which means that they perform very good on the training set, but can not generalize the predictive performance on the test set. Meanwhile, different versions of dropouts exist, spatial dropouts for convolutions, dropouts for sequences, etc. The design recommendation for the standard dropout is using p=0.5 for the hidden layers and p<0.5 for the input layer (Srivastava et al., 2014).
+The idea of dropout is straightforward: For each mini-batch in the training process, a random proportion of the neurons are "dropped out". This means, in the forward process, these neuron outputs are not considered as the input of the next layer. Moreover, during backpropagation, the weights of the neurons will not be updated. Dropout simulates the behavior of training multiple versions of the network, which would be computationally expensive if these would be done by hand. Dropout prevents models from overfitting, which means that they perform very good on the training set, but can not generalize the predictive performance on the test set. Meanwhile, different versions of dropouts exist, spatial dropouts for convolutions, dropouts for sequences, etc. The design recommendation for the standard dropout is using p=0.5 for the hidden layers and p<0.5 for the input layer (Srivastava et al., 2014).
 
 ---
 
@@ -27,6 +27,8 @@ The idea of dropout is very simple: For each mini-batch in the training process,
 <html>
 <iframe width="800" height="500" src="https://www.youtube.com/embed/D8PJAL-MZv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
+
+Source: 
 
 ---
 
@@ -47,7 +49,18 @@ def model():
     return m
 ```
 
-Note: In Tensorflow you can just call the Dropout layer from the layer package
+Note: In Tensorflow one can call the Dropout layer from the layer package
+
+---
+
+<html>
+<h3>References</h3>
+<list>
+    <li>Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014). Dropout: a simple 
+        way to prevent neural networks from overfitting. The journal of machine learning research, 15(1), 1929-
+        1958.</li>
+</list>
+</html>
 
 ---
 

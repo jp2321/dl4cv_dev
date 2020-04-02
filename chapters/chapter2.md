@@ -48,31 +48,31 @@ This is not correct either.
 <exercise id="6" title="Hands on image reading">
 
 Read the dog.jpeg image from disk. It is in the exercise folder.
-First read it as black and white image, second as colored image.
-Display both image with the right color setting.
+First, read it as a black and white image, second as a colored image.
+Display both image.
 
 <codeblock id="02_02">
 
-Specifiy the colorchange for the colored image.
+Specify the color change for the colored image.
 
 </codeblock>
 </exercise>
 
 <exercise id="7" title="Hands on slicing and dicing">
 
-As the image is a numpy array, one can "slice and dice" the image in an easy fashion.
-Dice the dog image so that it shows the height from 81 to 127's pixel and the width of the 49's to 107 pixels with all color channels.
+As the image is a NumPy array, one can "slice and dice" the image in an easy fashion.
+Dice the dog image so that it shows the height from 81 to 127's pixels and the width of the 49's to 107 pixels with all color channels.
 
 <codeblock id="02_02_1">
 
-Slice and dice via the index of the array. Rember it starts by zero
+Slice and dice via the index of the array. Rember it starts by zero.
 
 </codeblock>
 </exercise>
 
 <exercise id="8" title="Hands on slicing and dicing and coloring">
 
-Set the colorvalues for red high so that the box of 0 to 70 and 0 to 40 appears red.
+Set the color values for red high so that the box of 0 to 70 and 0 to 40 appears red.
 
 <codeblock id="02_02_2">
 
@@ -81,13 +81,13 @@ Set the colorvalues for red high so that the box of 0 to 70 and 0 to 40 appears 
 
 
 <exercise id="9" title="Resizing of images">
-The resize command is used to change the size of the image. Instead of cropping image parts, through interpolation the image size is changed.
+The resize command is used to change the size of the image. Instead of cropping image parts, through interpolation, the image size is changed.
 
-Resize the dog images from its original size to 50 by 50 pixels for image. Use the rescale command from cv2 for this.
+Resize the dog images from its original size to 50 by 50 pixels for the image. Use the rescale command from cv2 for this.
 
 <codeblock id="02_02_3">
-	IMPORTANT: cv2 denotes the first parameter in the tuple as the width, the second as the height!
-	In the numpy array, the first is the height, the second the width!
+    IMPORTANT: cv2 denotes the first parameter in the tuple as the width, the second as the height!
+    In the NumPy array, the first is the height, the second the width!
 </codeblock>
 
 </exercise>
@@ -100,7 +100,7 @@ Resize the dog images from its original size to 50 by 50 pixels for image. Use t
 </exercise>
 
 <exercise id="12" title="Exercise edge detection">
-Use the canny edge detector on the dog image. Use the canny edge detector two times, first with min threshold is 50, max threshold 150, second time with 100 and 200.
+Use the canny edge detector on the dog image. Use the canny edge detector two times, first with min threshold is 50, max threshold 150, the second time with 100 and 200.
 
 <codeblock id="02_02_4">
 
@@ -108,7 +108,7 @@ Use the canny edge detector on the dog image. Use the canny edge detector two ti
 </exercise>
 
 <exercise id="13" title="Edge detection limits">
-Given the two different edge detected results in the previous exercise. What holds true?
+Given the two different edge detection results in the previous exercise. What holds true?
 
 <choice>
 <opt text="When the minimum value is smaller the edges are stronger">
@@ -123,7 +123,7 @@ This is not the correct answer
 
 </opt>
 
-<opt text="Using a higher value for the minimum and maximum boundery results in less but stronger edges" correct="true">
+<opt text="Using a higher value for the minimum and maximum boundary results in less but stronger edges" correct="true">
 
 Correct!
 
@@ -186,14 +186,6 @@ This is not correct either.
  Rescale it to 300 by 300 pixels. Use 5 orientations, 8 by 8 pixels per cell and 2 by 2 cells per block
  
 <codeblock id="02_04">
-	Hint
+    Hint
 </codeblock>
 </exercise>
-
-<exercise id="111" title="Test">
-
-<codeblock id="02_03">
-	Hint
-</codeblock>
-</exercise>
-

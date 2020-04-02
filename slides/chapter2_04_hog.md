@@ -11,7 +11,7 @@ type: slides
 - by Dalal & Triggs (2005)
 - purpose: Detecting human detection in images
 - Some similarities to Canny Edge Detector in the image preprocessing
-- Aim: Describe with a historgram the image as accurate as possible
+- Aim: Describe with a histogram the image as accurately as possible
 - Works for B&W and color images
 - Can be used as a feature extractor to use in a ML pipeline
 
@@ -45,6 +45,9 @@ Note: This video explains very well, what HoG is
 
 <img src="vl1/hog-16x16-block-normalization.gif" alt="This image is in /static" width="30%">
 
+Note:
+Image source: Mallik, (2016)
+
 --- 
 
 
@@ -54,7 +57,6 @@ Note: This video explains very well, what HoG is
 - how large is the cell
 - how many cells are used to build a block 
 
-Image source: https://www.learnopencv.com/histogram-of-oriented-gradients/ <br>
 
 Note: Cell: Area for which the histogram is calculated
 Block: How many cells are considered for normalization
@@ -97,6 +99,25 @@ plt.show()
 <img src="vl1/histogram.png" alt="This image is in /static" width="25%">
 
 <img src="vl1/burger_hog.png" alt="This image is in /static" width="25%">
+
+---
+
+<html>
+<list>
+    <li>
+    Dalal, N., & Triggs, B. (2005). Histograms of oriented gradients for human detection. In 2005 IEEE 
+        computer society conference on computer vision and pattern recognition (CVPR'05) (Vol. 1, pp. 886-893). 
+        IEEE.
+    </li>
+    <li>
+    	Malkik, S. (2016). Histogram of Oriented Gradients. Retrieved from: https://www.learnopencv.com/histogram-of-oriented-gradients/
+    </li>
+    <li>
+      Scikit-image (2020). Histogram of Oriented Gradients. Last access, 22.02.2020: https://scikit-image.org/docs/dev/auto_examples/features_detection/plot_hog.html   
+    </li>
+</list>
+
+</html>
 
 ---
 

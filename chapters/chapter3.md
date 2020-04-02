@@ -61,7 +61,7 @@ This is not correct either.
 
 <exercise id="19" title="Hands on - coding a neural network">
 
- Use a neural network with two hidden layers with 10 and 20 neurons and 10 possible output classes. The task is a multi-class problem. The input size of the images are 32 by 32 pixels.
+ Use a neural network with two hidden layers with 10 and 20 neurons and 10 possible output classes. The task is a multi-class problem. The input size of the images is 32 by 32 pixels.
 
 <codeblock id="03_01">
 

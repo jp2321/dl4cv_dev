@@ -14,11 +14,11 @@ Reasons why BatchNorm works are highly discussed:
     2. Reduces wrong scaling of the activation outputs
 
 
-Batch norm learns 2 parameters: gamma and beta to scale and shift to a uniform distribution
+Batch norm learns 2 parameters: gamma and beta to scale and shift to a uniform distribution.
 
-Notes: Batch normalization is a technique to make the training process of the network more stable. Since the development in 2015, it is implemented in many models, not only CNNs but all types of networks. While the mechanism of batch norm is easy to explain, the reason why it works is highly discussed in research. The batch normalization layer learns two parameters to scale and shift the activations of the previous layer around a mean of 0 and a variance of 1 (Ioffe & Szegedy, 2015).
+Notes: Batch normalization is a technique to make the training process of the network more stable. Since the development in 2015, it is implemented in many models, not only CNN's but all types of networks. While the mechanism of batch norm is easy to explain, the reason why it works is highly discussed in research. The batch normalization layer learns two parameters to scale and shift the activations of the previous layer around a mean of 0 and a variance of 1 (Ioffe & Szegedy, 2015).
 
-The original idea was that it reduces the internal covariate shift. This phenomenon describes the shift of the activation output of the previous layer due to weight updates. As a consequence, the preceding layer has differently scaled input, which might result in a sizeable change of the weights in the next mini-batch or epoch. This effect makes learning very unstable. Current research finds very little evidence that batch normalization reduces internal covariate shift and the reason why it works is highly discussed. For further readings, see <a href="https://arxiv.org/pdf/1805.11604.pdf" target="blank">here</a> and <a href="https://arxiv.org/abs/1805.10694" target="blank">here</a> . Nevertheless, batch normalization is very helpful in improving the stability of the learning process.
+The original idea was that it reduces the internal covariate shift. This phenomenon describes the shift of the activation output of the previous layer due to weight updates. As a consequence, the preceding layer has differently scaled input, which might result in a sizeable change of the weights in the next mini-batch or epoch. This effect makes learning very unstable. Current research finds very little evidence that batch normalization reduces internal covariate shift, and the reason why it works is highly discussed. For further readings, see <a href="https://arxiv.org/pdf/1805.11604.pdf" target="blank">here</a> and <a href="https://arxiv.org/abs/1805.10694" target="blank">here</a> . Nevertheless, batch normalization is very helpful in improving the stability of the learning process.
 
 ---
 
@@ -28,12 +28,13 @@ The original idea was that it reduces the internal covariate shift. This phenome
 <iframe width="800" height="500" src="https://www.youtube.com/embed/nUUqwaxLnWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
+Source: https://www.youtube.com/embed/nUUqwaxLnWs
 
 ---
 
 # Spatial dropout
 
-Instead of dropping out one neuron (in dense networks) or cell in the matrix, a whole feature map can be dropped out
+Instead of dropping out one neuron (in dense networks) or cell in the matrix, a whole feature map can be dropped out.
 
 Example input shape: [3,3,64] 
 
@@ -42,10 +43,10 @@ Spatial dropout: One of the 64 filters is not updated
 
 Works very well when having a strong correlation between neurons 
 
-Source: Tompson et al., 2015, Brownlee, 2018.
+Source: Tompson et al. (2015), Brownlee, (2018).
 
 
-Note: Between convolutional layers spatial dropouts should be used for dropping filters
+Note: Between convolutional layers, spatial dropouts should be used for dropping filters
 
 ---
 
@@ -78,6 +79,22 @@ def neural_network_2():
     
     return m
 ```
+
+---
+
+<html>
+<h3>References</h3>
+<list>
+        <li>Brownlee, J. (2018). How to Reduce Overfitting With Dropout Regularization in Keras. Retrieved 
+                from: https://machinelearningmastery.com/how-to-reduce-overfitting-with-dropout-regularization-in-
+                keras/ Last access: 23.02.2020. </li>
+        <li>Ioffe, S., & Szegedy, C. (2015). Batch normalization: Accelerating deep network training by reducing 
+            internal covariate shift. arXiv preprint arXiv:1502.03167.</li>
+        <li>Tompson, J., Goroshin, R., Jain, A., LeCun, Y., & Bregler, C. (2015). Efficient object localization 
+            using convolutional networks. In Proceedings of the IEEE Conference on Computer Vision and Pattern 
+            Recognition (pp. 648-656).</li>
+</list>
+</html>
 
 ---
 

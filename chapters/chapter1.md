@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 1: Computer Vision overview'
 description:
-  'This chapter will give an overview about computer vision'
+  'This chapter will give an overview of computer vision'
 prev: null
 next: /chapter2
 type: chapter
@@ -17,7 +17,7 @@ id: 1
 
 <exercise id="2" title="Computer vision applications">
 
-Let's ask some questions about the slides. Whats the correct answer?
+ What is the correct answer?
 
 <choice>
 <opt text="Object detection cateogrizes each pixel in the image">

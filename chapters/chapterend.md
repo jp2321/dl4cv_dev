@@ -2,7 +2,7 @@
 title: 'Chapter X: The end'
 description:
   'This is the end'
-prev: /chapter1
+prev: /chapter5
 next: null
 type: chapter
 id: 5

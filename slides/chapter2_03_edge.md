@@ -9,8 +9,8 @@ type: slides
 # Canny Edge Detection
 
 - Developed by Canny in 1986
-- Edges are pixels where the pixels magnitude changes the strongest
-- Works only for one channel images (e.g. black and white)
+- Edges are pixels where the pixel's magnitude changes the strongest
+- Works only for one channel images (e.g., black and white)
 
 Source: Canny (1986)
 
@@ -20,7 +20,7 @@ Source: Canny (1986)
 1. De-noiseing with a Gaussian kernel
 2. Sobel kernel to find edges
 3. Calculate Edge Gradient and Angle of direction
-4. Non-max surpression to get only "true" edges
+4. Non-max suppression to get only "true" edges
 
 Note: We will see all these steps in detail in the next few slides
 
@@ -34,8 +34,8 @@ Note: We will see all these steps in detail in the next few slides
 
 Source: https://www.youtube.com/watch?v=uihBwtPIBxM 
 
-Note: This video explains very well, what a Gausian blur is and how kernels are applied on images. 
-For now, it is enough to understand the basic concept, we will talk about kernels in a few more sessions in detail.
+Note: This video explains very well what a Gaussian blur is and how kernels are applied to images. 
+For now, it is enough to understand the basic concept. We will talk about kernels in a few more sessions in detail.
 
 ---
 
@@ -63,7 +63,7 @@ Source: https://www.youtube.com/watch?v=sRFM5IEqR2w
 
 <img src="vl1/math_canny.png" alt="This image is in /static" width="30%">
 
-Source: https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html
+Source: OpenCV (2020)
 
 ---
 
@@ -76,7 +76,9 @@ Source: https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html
 
 <img src="vl1/canny_thresold.jpg" alt="This image is in /static" width="30%">
 
-Note: The first figure visualizes that the gradient edge direction between C and A and B is used to identify B as an edge point. The second visualization shows that min-max surpression. As the pixel value of A is larger than the max threshold, it is defined as a true edge, B and C as possible edges.  
+Image source: OpenCV (2020)
+
+Note: The first figure visualizes that the gradient edge direction between C and A and B is used to identify B as an edge point. The second visualization shows that min-max suppression. As the pixel value of A is larger than the max threshold, it is defined as a true edge, B, and C as possible edges.  
 
 ---
 
@@ -100,7 +102,24 @@ plt.show()
 ```
 <img src="vl1/burger_canny.jpeg" alt="This image is in /static" width="30%">
 
-Note: This is the result of the edge detection. Different min-max values lead to different results
+Note: This is the result of the edge detection. Different min-max values lead to different results.
+
+---
+
+<html>
+
+<h3>References:</h3>
+
+<list>
+    <li>
+    Canny, J. (1986). A computational approach to edge detection. IEEE Transactions on pattern analysis and machine 
+        intelligence, (6), 679-698.
+    </li>
+    <li>
+    	OpenCV (2020). Canny Edge Detection. Retrieved from: https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html
+    </li>
+</list>
+</html>
 
 ---
 

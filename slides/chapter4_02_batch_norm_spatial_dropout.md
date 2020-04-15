@@ -28,7 +28,7 @@ The original idea was that it reduces the internal covariate shift. This phenome
 <iframe width="800" height="500" src="https://www.youtube.com/embed/nUUqwaxLnWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/embed/nUUqwaxLnWs
+Source: Deeplearning.ai (2017)
 
 ---
 
@@ -88,6 +88,7 @@ def neural_network_2():
         <li>Brownlee, J. (2018). How to Reduce Overfitting With Dropout Regularization in Keras. Retrieved 
                 from: https://machinelearningmastery.com/how-to-reduce-overfitting-with-dropout-regularization-in-
                 keras/ Last access: 23.02.2020. </li>
+        <li>Deeplearning.ai (2017). Why does Batch Norm work? (C2W3L06). Retrieved from: https://www.youtube.com/watch?v=nUUqwaxLnWs&feature=emb_title</li>
         <li>Ioffe, S., & Szegedy, C. (2015). Batch normalization: Accelerating deep network training by reducing 
             internal covariate shift. arXiv preprint arXiv:1502.03167.</li>
         <li>Tompson, J., Goroshin, R., Jain, A., LeCun, Y., & Bregler, C. (2015). Efficient object localization 

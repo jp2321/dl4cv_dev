@@ -32,7 +32,7 @@ Note: We will see all these steps in detail in the next few slides
 <iframe width="800" height="500" src="https://www.youtube.com/embed/C_zFhWdM4ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/watch?v=uihBwtPIBxM 
+Source: Pound (2015c).
 
 Note: This video explains very well what a Gaussian blur is and how kernels are applied to images. 
 For now, it is enough to understand the basic concept. We will talk about kernels in a few more sessions in detail.
@@ -45,7 +45,7 @@ For now, it is enough to understand the basic concept. We will talk about kernel
 <iframe width="800" height="500" src="https://www.youtube.com/embed/uihBwtPIBxM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/watch?v=uihBwtPIBxM
+Source: Pound (2015c)
 
 ---
 
@@ -55,7 +55,7 @@ Source: https://www.youtube.com/watch?v=uihBwtPIBxM
 <iframe width="800" height="500" src="https://www.youtube.com/embed/sRFM5IEqR2w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/watch?v=sRFM5IEqR2w 
+Source: Pound (2015a)
 
 ---
 
@@ -118,6 +118,16 @@ Note: This is the result of the edge detection. Different min-max values lead to
     <li>
     	OpenCV (2020). Canny Edge Detection. Retrieved from: https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html
     </li>
+    <li>
+    	Pound, M. (2015a). Canny Edge Detector - Computerphile. Retrieved from: https://www.youtube.com/watch?v=sRFM5IEqR2w 
+    </li>
+    <li>
+    	Pound, M. (2015b). Finding the Edges (Sobel Operator) - Computerphile. Retrieved from: https://www.youtube.com/watch?v=uihBwtPIBxM
+    </li>
+    <li>
+    	Pound, M. (2015c). How Blurs & Filters Work - Computerphile. Retrieved from: https://www.youtube.com/watch?v=C_zFhWdM4ic&feature=youtu.be 
+    </li>
+
 </list>
 </html>
 

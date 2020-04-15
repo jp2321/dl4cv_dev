@@ -35,7 +35,7 @@ Note: We will see all these steps in detail in the next few slides
 <iframe width="800" height="500" src="https://www.youtube.com/embed/4ESLTAd3IOM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/watch?v=4ESLTAd3IOM
+Source: Ahmed (2018)
 
 Note: This video explains very well, what HoG is
 
@@ -104,6 +104,9 @@ plt.show()
 
 <html>
 <list>
+    <li>
+        Ahmed, R. (2018). Computer Vision with OpenCV: HOG Features Extraction. Retrieved from: https://www.youtube.com/watch?v=4ESLTAd3IOM
+    </li>
     <li>
     Dalal, N., & Triggs, B. (2005). Histograms of oriented gradients for human detection. In 2005 IEEE 
         computer society conference on computer vision and pattern recognition (CVPR'05) (Vol. 1, pp. 886-893). 

@@ -77,8 +77,8 @@ Reducing parameters:
 
 Source: He, Zhang, Ren, & Sun (2016), Fung (2017)
 
-Note: He, Zhang, Ren, and Sun in 2015 made the discovery that when training very deep networks of 50+ layers, the networks could not outperform networks with 20 layers. This is contradicting to the theory that with network capacity and the prediction performance increase with the number of layers.
-This phenomenon is called vanishing gradient problem. In large networks, the weight updates might get very small and thus insignificant because the gradients are multiplied in the backpropagation process. To overcome this hurdle, the authors introduced the identity mapping or skip connection. ResNet takes advantage of the multi-branch architecture. The basic idea is that after transforming the image by (multiple) convolutional operation, the original input of the convolution is added to the results. The advantage is that still the original scenario is captured in the result as well as the learned objects. However, this can just be achieved if the skip connected input, and the output of the convolution have the same size. Thus, layers with the padding "same" are used. For mapping dimensions, when decreasing the output size, a one by one convolutional layer is used (Fung, 2017, He, Zhang, Ren, & Sun 2016, Vasilev, 2019).
+Note: He, Zhang, Ren, and Sun in 2015 made the discovery that when training very deep networks of 50+ layers, the networks could not outperform networks with 20 layers. This is contradicting to the theory that network capacity increases prediction performance.
+The phenomenon is called vanishing gradient problem. In large networks, the weight updates might get very small and thus insignificant because the gradients are multiplied in the backpropagation process. To overcome this hurdle, the authors introduced the identity mapping or skip connection. ResNet takes advantage of the multi-branch architecture. The basic idea is that after transforming the image by (multiple) convolutional operation, the original input of the convolution is added to the results. The advantage is that still the original scenario is captured in the result as well as the learned objects. However, this can just be achieved if the skip connected input, and the output of the convolution has the same size. Thus, layers with the padding "same" are used. For mapping dimensions, when decreasing the output size, a one by one convolutional layer is used (Fung, 2017, He, Zhang, Ren, & Sun 2016, Vasilev, 2019).
 
 ---
 
@@ -111,7 +111,7 @@ For a large image click <a href="https://miro.medium.com/max/306/1*CEg9KOO0mwgTm
 <iframe width="800" height="500" src="https://www.youtube.com/embed/ZILIbUvp5lk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/embed/ZILIbUvp5lk
+Source: Deeplearning.ai (2017c)
 
 ---
 
@@ -121,7 +121,7 @@ Source: https://www.youtube.com/embed/ZILIbUvp5lk
 <iframe width="800" height="500" src="https://www.youtube.com/embed/RYth6EbBUqM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/embed/RYth6EbBUqM
+Source: Deeplearning.ai (2017d)
 
 Note: This is a good description of why Resnet works
 
@@ -148,6 +148,8 @@ Note: The inception architecture was introduced in 2015 by Szegedy, Ioffe, Vanho
 <iframe width="800" height="500" src="https://www.youtube.com/embed/C86ZXvgpejM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
+Source: Deeplearning.ai (2017b)
+
 ---
 
 # Inception Video description (2)
@@ -155,11 +157,17 @@ Note: The inception architecture was introduced in 2015 by Szegedy, Ioffe, Vanho
 <iframe width="800" height="500" src="https://www.youtube.com/embed/KfV8CJh7hE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
+Source: Deeplearning.ai (2017a)
+
 ---
 
 <html>
 <h3>References</h3>
 <list>
+    <li>Deeplearning.ai (2017a). Inception Network. Retrieved from: https://www.youtube.com/watch?v=KfV8CJh7hE0&feature=emb_title</li>
+    <li>Deeplearning.ai (2017b). Inception Network Motvation: Retrieved from: https://www.youtube.com/watch?v=C86ZXvgpejM&feature=emb_title</li>
+    <li>Deeplearning.ai (2017c). Resnets. Retrieved from: https://www.youtube.com/watch?v=ZILIbUvp5lk&feature=emb_title</li>
+    <li> Deeplearning.ai (2017d). Why ResNets Work. Retrieved from: https://www.youtube.com/watch?v=RYth6EbBUqM&feature=emb_title </li>
     <li>Fung, V. (2017). An Overview of ResNet and its Variants. Retrieved from: https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035 . Last Access: 23.02.2020</li>
         <li>He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In 
             Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778).</li>

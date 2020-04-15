@@ -12,7 +12,7 @@ type: slides
     
 - Example:
     Matrix multiplication in calculus class
-    Transfer it to deep learning course
+    Transfer it to this course
     
 - Aim: Increase performance
 - Few observations in the target domain
@@ -87,7 +87,7 @@ A larger version of the image can be found <a href="https://miro.medium.com/max/
 <iframe width="800" height="500" src="https://www.youtube.com/embed/yofjFQddwHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/watch?v=yofjFQddwHE
+Source: Deeplearning.ai (2017)
 
 ---
 
@@ -95,6 +95,7 @@ Source: https://www.youtube.com/watch?v=yofjFQddwHE
 <h3>References</h3>
 <list>
     <li>Brownlee, J. (2019). A gentle introduction to transfer learning for deep learning. Retrieved from: https://machinelearningmastery.com/transfer-learning-for-deep-learning/ . Last access: 23.01.2020</li>
+    <li>Deeplearning.ai (2017). Transfer Learning (C3W2L07). Retrieved from: https://www.youtube.com/watch?v=yofjFQddwHE</li>
         <li>Pan, S. J., & Yang, Q. (2009). A survey on transfer learning. IEEE Transactions on knowledge and data 
             engineering, 22(10), 1345-1359.</li>
     <li> Sarkar, D. (2018). A comprehensiv hands-on guide to transfer learning with real-word applications in deep learning. Retrieved from: https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a Last Access: 23.01.2020

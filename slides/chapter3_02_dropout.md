@@ -28,7 +28,7 @@ The idea of dropout is straightforward: For each mini-batch in the training proc
 <iframe width="800" height="500" src="https://www.youtube.com/embed/D8PJAL-MZv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: 
+Source: Deeplearning.ai (2017)
 
 ---
 
@@ -56,6 +56,8 @@ Note: In Tensorflow one can call the Dropout layer from the layer package
 <html>
 <h3>References</h3>
 <list>
+    <li> Deeplearning.ai (2017). Dropout Regularization (C2W1L06). Retrieved from: https://www.youtube.com/watch?v=D8PJAL-MZv8&feature=emb_title 
+    </li>
     <li>Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., & Salakhutdinov, R. (2014). Dropout: a simple 
         way to prevent neural networks from overfitting. The journal of machine learning research, 15(1), 1929-
         1958.</li>

@@ -118,7 +118,7 @@ A list of different activation function and their mathematical properties can be
 <iframe width="800" height="500" src="https://www.youtube.com/embed/ILsA4nyG7I0?list=PLVZqlMpoM6kaJX_2lLKjEhWI0NlqHfqzp" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/watch?v=ILsA4nyG7I0&list=PLVZqlMpoM6kaJX_2lLKjEhWI0NlqHfqzp
+Source: Rohrer (2017)
 
 Note: This video explains very well how a neural network works.
 
@@ -132,6 +132,7 @@ As dense neural networks can not use a multidimensional array as an input, first
 print(X_train.shape) # the original dataset size
 train = np.reshape(X_train, (12000,784)) # as images have the size 28 by 28, there are 784 pixels in each image
 # with the numpy reshape command the shape of the trainings array can be changed
+# you could also used the np.flatten command here; Additional the flatten array needs to be reshaped with the reshaped command
 ```
 
 ```out
@@ -200,6 +201,7 @@ By calling the fit method, the network could be trained.
     <li>Babel, P. (2019). Deep Neural Networks from scratch in Python. https://towardsdatascience.com/deep-neural-networks-from-scratch-in-python-451f07999373  </li>
     <li>Raschka, S., & Mirjalili, V. (2019). Python Machine Learning: Machine Learning and Deep Learning with 
             Python, scikit-learn, and TensorFlow 2. Packt Publishing Ltd.</li>
+    <li>Rohrer, B. (2017). How Deep Neural Networks Work. Retrieved from: https://www.youtube.com/watch?v=ILsA4nyG7I0&list=PLVZqlMpoM6kaJX_2lLKjEhWI0NlqHfqzp </li>
     <li>Rosenblatt, F. (1958). The perceptron: a probabilistic model for information storage and organization in 
         the brain. Psychological review, 65(6), 386.</li>
     <li>Rumelhart, D. E., Hinton, G. E., & Williams, R. J. (1986). Learning representations by back-propagating 

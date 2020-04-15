@@ -3,7 +3,7 @@ title: 'Chapter 5: CNN Architectures'
 description:
   'This chapter will introduce different CNN architectures'
 prev: /chapter4
-next: /chapterend
+next: /chapter6
 type: chapter
 id: 5
 ---

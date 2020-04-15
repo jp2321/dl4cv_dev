@@ -79,7 +79,7 @@ Note: This image shows the valid padding. It can be clearly seen that the kernel
 <iframe width="800" height="500" src="https://www.youtube.com/embed/py5byOOHZM8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </html>
 
-Source: https://www.youtube.com/watch?v=ILsA4nyG7I0&list=PLVZqlMpoM6kaJX_2lLKjEhWI0NlqHfqzp
+Source: Pound (2016)
 
 Note: This video explains very well how a CNN works.
 
@@ -170,19 +170,21 @@ There is a debate going on if pooling should be replaced by strides.
 Many networks are using pooling - this more the "historic way".
 New network architecture (we will discuss them next week) are replacing these with strides
 
-Source: https://youtu.be/fwNLf4t7MR8
+Source: Becker (2018)
 
 ---
 
 <html>
 <h3>References</h3>
 <list>
+        <li>Becker, D. (2018). Stride Length and Dropout for Better Deep Learning Models. Retrieved from: https://youtu.be/fwNLf4t7MR8 </li>
         <li> LeCun, Y., Boser, B. E., Denker, J. S., Henderson, D., Howard, R. E., Hubbard, W. E., & Jackel, L. D. 
             (1990). Handwritten digit recognition with a back-propagation network. In Advances in neural 
             information processing systems (pp. 396-404).</li>
         <li>LeCun, Y., & Bengio, Y. (1995). Convolutional networks for images, speech, and time series. The 
             handbook of brain theory and neural networks, 3361(10), 1995.</li>
         <li>LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. nature, 521(7553), 436-444.</li>
+        <li>Pound, M. (2016). Neural Network that Changes Everything - Computerphile. Retrieved from: https://www.youtube.com/watch?v=py5byOOHZM8&feature=emb_title</li>
         <li>Raschka, S., & Mirjalili, V. (2019). Python Machine Learning: Machine Learning and Deep Learning with 
             Python, scikit-learn, and TensorFlow 2. Packt Publishing Ltd.</li>
         <li> Saha, S. (2018). A Comprehensive Guide to Convolutional Neural Networks — the ELI5 way. Retrieved 

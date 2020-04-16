@@ -97,18 +97,26 @@ Thus, most often mini-batch stochastic gradient is used, where after for each mi
 ---
 
 # Activation functions
+<img src="vl2/activation_functions.png">
 
-- Any mathematical function
-- Significant effect on the performance
+Source: Jain, 2019
 
-Note: Often used are relu, sigmoid, and softmax for the hidden layers
+Note: 
+The activation function can be any mathematical function.
+The selection has a significant effect on the performs, especially when layers are stacked with non compatible functions.
+Most often used is relu for the hidden layer. Sigmoid, and softmax were used in the past, but have a complex derivate to calculate, so the computing performance is low and suffer from a vanishing gradient problem. This problem will be discussed in chapter 5 in more detail. However, also relu is not free from hurdles. There is a phenomena called dying relu problem.
 
 For the output layer:
+
 softmax: multiclass
-sigmoid: multilabel 
+
+sigmoid: multilabel
+ 
 linear: regression problems
 
-A list of different activation function and their mathematical properties can be found here: <a href="https://keras.io/activations/" target="blank">keras activation functions</a> and <a href="https://en.wikipedia.org/wiki/Activation_function" target="blank">Wikipedia</a>
+The softmax function is a special case of the sigmoid, so that the probabilities are not per output neuron but distributed over all output neurons to mimic the one-hot encoded vector. 
+
+A list of different activation function and their mathematical properties can be found here: <a href="https://www.tensorflow.org/api_docs/python/tf/keras/activations" target="blank">keras activation functions</a> and <a href="https://en.wikipedia.org/wiki/Activation_function" target="blank">Wikipedia</a> or <a href="https://towardsdatascience.com/complete-guide-of-activation-functions-34076e95d044" target="blank">here</a>
 
 ---
 
@@ -199,6 +207,7 @@ By calling the fit method, the network could be trained.
 <h3>References</h3>
 <list>
     <li>Babel, P. (2019). Deep Neural Networks from scratch in Python. https://towardsdatascience.com/deep-neural-networks-from-scratch-in-python-451f07999373  </li>
+    <li>Jain, P. (2019). Complete Guide of Activation functions. Retrieved from: https://towardsdatascience.com/complete-guide-of-activation-functions-34076e95d044</li>
     <li>Raschka, S., & Mirjalili, V. (2019). Python Machine Learning: Machine Learning and Deep Learning with 
             Python, scikit-learn, and TensorFlow 2. Packt Publishing Ltd.</li>
     <li>Rohrer, B. (2017). How Deep Neural Networks Work. Retrieved from: https://www.youtube.com/watch?v=ILsA4nyG7I0&list=PLVZqlMpoM6kaJX_2lLKjEhWI0NlqHfqzp </li>

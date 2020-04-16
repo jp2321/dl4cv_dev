@@ -107,3 +107,18 @@ This is not the correct answer. Even in this small example, the computer goes Ou
 </slides>
 
 </exercise>
+
+<exercise id="31" title="Play with the CNNs">
+
+Use the Cifar 10 Datasets. Try out different settings of a CNN with: 
+
+a) Different Kernel sizes 
+b) Different Number of Layers
+c) Dropout/Spatial Dropout
+d) Different Hyperparameters: BatchSizes, Optimizer, Learning Rates
+
+... to get a feeling for CNNs
+
+Hint: It is worthwhile to compare SGD (Stochastics Gradient Descent) to Adam, when the same architecture with the same batch size and number of epochs is trained?
+
+</exercise>

@@ -20,13 +20,13 @@ id: 1
  What is the correct answer?
 
 <choice>
-<opt text="Object detection cateogrizes each pixel in the image">
+<opt text="Object detection categorizes each pixel in the image">
 
 This is not the correct answer.
 
 </opt>
 
-<opt text="In image classification the image is rated in different cateogries" correct="true">
+<opt text="In image classification the image is rated in different categories" correct="true">
 
 Good job!
 

@@ -33,7 +33,7 @@ Correct!
 
 <opt text="The VGG network uses dropout layers by default">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>
@@ -56,7 +56,7 @@ Good job!
 
 <opt text="All convolutions in ResNet have a padding type of valid">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 
@@ -139,7 +139,7 @@ This is not the correct answer
 
 <opt text="The non-trainable parameters decreased, the trainable parameters increased">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>

@@ -38,7 +38,7 @@ plt.imshow(img) # show the image
 ```
 <img src="vl1/burger_bgr.jpeg" alt="This image is in /static" width="30%">
 
-Note: Here can be seen that cv2 uses the BGR format, which would lead to wrong color schemas when it is visualized.
+Note: Here it can be seen that cv2 uses the BGR format, which would lead to wrong color schemas when it is visualized.
 
 ---
 

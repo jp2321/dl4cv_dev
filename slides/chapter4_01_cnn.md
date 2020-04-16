@@ -89,14 +89,15 @@ Note: This video explains very well how a CNN works.
 
 <img src="vl3/colored_convolution.gif" alt="This image is in /static" width="50%">
 
-The given concepts can also be extended to multiple channels.
+Source: Saha (2018)
+
+Note: The given concepts can also be extended to multiple channels.
 Now each filter exists of multiple kernels added together.
 
 The convolutions of the second convolutional layer are the combination of the convolved output of the first layer.
 Compared to the image above:
 
 Instead of having for example 3 channels (R,G,B), the output of the first convolution may have 16,32 or 128 or many more channels. For each filter of the first convolutional layer, there is one channel output.
-Source: Saha (2018)
 
 ---
 
@@ -160,24 +161,9 @@ def neural_network_2():
 
 ---
 
-# Pooling vs strides
-
-<html>
-<iframe width="800" height="450" src="https://www.youtube.com/embed/fwNLf4t7MR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</html>
-
-There is a debate going on if pooling should be replaced by strides. 
-Many networks are using pooling - this more the "historic way".
-New network architecture (we will discuss them next week) are replacing these with strides
-
-Source: Becker (2018)
-
----
-
 <html>
 <h3>References</h3>
 <list>
-        <li>Becker, D. (2018). Stride Length and Dropout for Better Deep Learning Models. Retrieved from: https://youtu.be/fwNLf4t7MR8 </li>
         <li> LeCun, Y., Boser, B. E., Denker, J. S., Henderson, D., Howard, R. E., Hubbard, W. E., & Jackel, L. D. 
             (1990). Handwritten digit recognition with a back-propagation network. In Advances in neural 
             information processing systems (pp. 396-404).</li>

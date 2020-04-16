@@ -3,19 +3,19 @@ title: 'Chapter 4: Convolutional neural network'
 description:
   'This chapter will introduce CNNs'
 prev: /chapter3
-next: /chapter4
+next: /chapter5
 type: chapter
 id: 4
 ---
 
-<exercise id="22" title="What is a cnn?" type="slides">
+<exercise id="25" title="What is a cnn?" type="slides">
 
 <slides source="chapter4_01_cnn">
 </slides>
 
 </exercise>
 
-<exercise id="23"  title="Hands on - CNNs">
+<exercise id="26"  title="Hands on - CNNs">
     Use a convolutional neural network for classifying the 32 by 32 colored images.
     The first convolutional layer should have 16 filters with a 3 by 3 kernel, followed by a max pooling.
     The second convolutional layer should have 32 filters with a 3 by 3 kernel
@@ -28,13 +28,13 @@ Fill in the blanks.
 </codeblock>
 </exercise>
 
-<exercise id="24" title="Batch Norm and Spatial Dropout" type="slides">
+<exercise id="27" title="Batch Norm and Spatial Dropout" type="slides">
 
 <slides source="chapter4_02_batch_norm_spatial_dropout">
 </slides>
 </exercise>
 
-<exercise id="25"  title="Hands on - CNNs (2)">
+<exercise id="28"  title="Hands on - CNNs (2)">
     This given network is overfitting. Therefore one decides to use Spatial Dropouts for the convolutional layers as well as Dropouts for the fully connected layers.
 
     Dropout rates are 0.2, 0.5, 0.5 - Fill in the blanks
@@ -46,7 +46,7 @@ Fill in the blanks.
 </codeblock>
 </exercise>
 
-<exercise id="26" title="Performance comparision">
+<exercise id="29" title="Performance comparision">
     Execute the notebook 02_cnn.ipynb.
     What are the results comparing model 1, model 2 and model 3
 <choice id=1>
@@ -65,7 +65,7 @@ This is not the correct answer
 
 <opt text="Model 1 is performing worst as it does not use dropout and batch normalization">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>
@@ -88,13 +88,13 @@ Good job!
 
 <opt text="The network trains fastest with batch normalization">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 
 <opt text="The network trains faster when the batch size the dataset size">
 
-This is not correct either. Even in this small example, the computer goes Out of memory (OOM)
+This is not the correct answer. Even in this small example, the computer goes Out of memory (OOM)
 
 </opt>
 
@@ -102,7 +102,7 @@ This is not correct either. Even in this small example, the computer goes Out of
 
 </exercise>
 
-<exercise id=27 title="Some tricks for deep learning" type="slides">
+<exercise id="30" title="Some tricks for deep learning" type="slides">
     <slides source="chapter4_03_some_tricks_with_neural_networks">
 </slides>
 

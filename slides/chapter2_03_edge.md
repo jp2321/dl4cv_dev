@@ -17,7 +17,7 @@ Source: Canny (1986)
 ---
 
 # Steps in Canny Edge Detection
-1. De-noiseing with a Gaussian kernel
+1. De-noising with a Gaussian kernel
 2. Sobel kernel to find edges
 3. Calculate Edge Gradient and Angle of direction
 4. Non-max suppression to get only "true" edges

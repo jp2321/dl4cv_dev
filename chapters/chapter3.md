@@ -1,21 +1,21 @@
 ---
 title: 'Chapter 3: Deep Learning fundamentals'
 description:
-  'This chapter will introduce different image manipulation techniques'
+  'This chapter will introduce the deep learning fundamentals'
 prev: /chapter2
-next: /chapter3
+next: /chapter4
 type: chapter
 id: 3
 ---
 
-<exercise id="17" title="What is a neural network" type="slides">
+<exercise id="16" title="What is a neural network" type="slides">
 
 <slides source="chapter3_01_neural_networks">
 </slides>
 
 </exercise>
 
-<exercise id="18" title="Questions about neural networks">
+<exercise id="17" title="Questions about neural networks">
 <choice id=1>
 
 <opt text="Were inspired by the human brain" correct="true">
@@ -32,7 +32,7 @@ This is not the correct answer
 
 <opt text="Neural networks are highly linear functions">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>
@@ -52,14 +52,14 @@ This is not the correct answer
 
 <opt text="Feed-forward is used for updating the weights in the network">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>
 
 </exercise>
 
-<exercise id="19" title="Hands on - coding a neural network">
+<exercise id="18" title="Hands on - coding a neural network">
 
  Use a neural network with two hidden layers with 10 and 20 neurons and 10 possible output classes. The task is a multi-class problem. The input size of the images is 32 by 32 pixels.
 
@@ -70,17 +70,17 @@ Fill in the blanks.
 </codeblock>
 </exercise>
 
-<exercise id="20" title="Dropout" type="slides">
+<exercise id="19" title="Dropout" type="slides">
 
 <slides source="chapter3_02_dropout">
 </slides>
 
 </exercise>
 
-<exercise id="21" title="Questions about dropout">
+<exercise id="20" title="Questions about dropout">
 <choice id=1>
 
-<opt text="Overfitting is a good performance on the test set and poor performance training set " >
+<opt text="Dropout increases the variance of the model" >
 
 This is not correct!
 
@@ -94,7 +94,7 @@ Correct!
 
 <opt text="Dropout increase the risk of overfitting">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>
@@ -106,17 +106,34 @@ Correct!
 
 </opt>
 
-<opt text="Dropout delets completley neurons from the network">
+<opt text="Dropout deletes completley neurons from the network">
 
 This is not the correct answer
 
 </opt>
 
-<opt text="Dropout delets layers from the network">
+<opt text="Dropout deletes layers from the network">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>
 
+</exercise>
+
+
+<exercise id="21" title="Play with the code I">
+	Use the Notebook provided in the Github to try out HOG and Canny as Feature Extractors combined with a Machine Learning Algorithms. What is the performance?
+</exercise>
+
+<exercise id = "22" title="Play with the code II">
+	In the notebook use the implementation of the perceptron. Vary the learning rate and epochs and test the accuracy on the dataset.
+</exercise>
+
+<exercise id="23" title="Play with the code III">
+	Use the Notebook provided in the Github and try out different settings for the Dense Neural network. Vary the number of hidden layers, the number of perceptrons per layer, activation functions, learning rates, batch sizes. What do you notice? Compare the performance to the ML Models with HOG/Edge Detection?
+</exercise>
+
+<exercise id="24" title="Play with the code IIII">
+	Create a new model and test different parameters for the dropout layer.
 </exercise>

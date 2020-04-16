@@ -3,7 +3,7 @@ title: 'Chapter 2: From black and white to color ...'
 description:
   'This chapter will introduce different image manipulation techniques'
 prev: /chapter1
-next: /chapter2
+next: /chapter3
 type: chapter
 id: 2
 ---
@@ -31,7 +31,7 @@ This is not the correct answer
 
 <opt text="Black and white images and colored images have the same number of channels">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>
@@ -75,7 +75,7 @@ Slice and dice via the index of the array. Rember it starts by zero.
 Set the color values for red high so that the box of 0 to 70 and 0 to 40 appears red.
 
 <codeblock id="02_02_2">
-
+Remember that cv2 has the order of the channels BGR.
 </codeblock>
 </exercise>
 
@@ -99,25 +99,25 @@ Resize the dog images from its original size to 50 by 50 pixels for the image. U
 </slides>
 </exercise>
 
-<exercise id="12" title="Exercise edge detection">
-Use the canny edge detector on the dog image. Use the canny edge detector two times, first with min threshold is 50, max threshold 150, the second time with 100 and 200.
+<exercise id="11" title="Exercise edge detection">
+Use the canny edge detector on the dog image. Use the canny edge detector two times, first with min threshold 50, max threshold 150, the second time with 100 and 200.
 
 <codeblock id="02_02_4">
-
+Put the hyperparameters in the Canny function
 </codeblock>
 </exercise>
 
-<exercise id="13" title="Edge detection limits">
+<exercise id="12" title="Edge detection limits">
 Given the two different edge detection results in the previous exercise. What holds true?
 
 <choice>
-<opt text="When the minimum value is smaller the edges are stronger">
+<opt text="When the minimum value is smaller the edges are clearer pronounced">
 
 This is not the correct answer
 
 </opt>
 
-<opt text="When the maximum value is smaller the edges are stronger">
+<opt text="When the maximum value is smaller there are less edges">
 
 This is not the correct answer
 
@@ -132,7 +132,7 @@ Correct!
 
 </exercise>
 
-<exercise id="14" title="Edge detection quiz">
+<exercise id="13" title="Edge detection quiz">
 <choice id=1>
 <opt text="In edge detection gaussian kernels are used for de-noiseing" correct="true">
 
@@ -148,7 +148,7 @@ This is not the correct answer
 
 <opt text="De-noiseing is done on all three input channels">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>
@@ -168,24 +168,24 @@ This is not the correct answer
 
 <opt text="Edges are found by standardization">
 
-This is not correct either.
+This is not the correct answer
 
 </opt>
 </choice>
 
 </exercise>
 
-<exercise id="15" title="HoG" type="slides">
+<exercise id="14" title="HoG" type="slides">
 
 <slides source="chapter2_04_hog">
 </slides>
 </exercise>
 
-<exercise id="16" title="Exercise HoG">
+<exercise id="15" title="Exercise HoG">
  Transform the dog image into hog features.
  Rescale it to 300 by 300 pixels. Use 5 orientations, 8 by 8 pixels per cell and 2 by 2 cells per block
  
 <codeblock id="02_04">
-    Hint
+    The colormapping for showing the image should correspond to the greyscaled input
 </codeblock>
 </exercise>

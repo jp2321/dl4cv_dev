@@ -6,6 +6,8 @@ def test():
 
     # If an assertion fails, the message will be displayed
     #assert  if (image_red[:70,:40,2].min()==255) and (image_red[:70,:40,2].max()<=255) , "This this red? Are you on the right spot?"
-    assert  image_red[:70,:40,2].all()==255, "This this red? Are you on the right spot?"
+    i = cv2.imread('exercises/dog.jpeg', cv2.IMREAD_COLOR)
+    i[:70,:40,2]=255
+    assert  np.array_equal(image_red,i), "This this red? Are you on the right spot?"
 
     __msg__.good("Nice!")

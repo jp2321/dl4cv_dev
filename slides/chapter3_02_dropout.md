@@ -11,7 +11,9 @@ type: slides
 <img src="vl2/dropout.png" alt="This image is in /static" width="50%">
 
 Overfitting: Perform well on the training set and poorly on the test set
+
 Motivation: Prevent overfitting
+
 Idea: Randomly dropping out neurons and their weights
 
 Source: Srivastava et al. (2014)

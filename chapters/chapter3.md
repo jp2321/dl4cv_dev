@@ -65,9 +65,11 @@ This is not the correct answer
 
 <codeblock id="03_01">
 
-Fill in the blanks.
+Multi-class problem require a special activation function.
 
 </codeblock>
+
+
 </exercise>
 
 <exercise id="19" title="Dropout" type="slides">

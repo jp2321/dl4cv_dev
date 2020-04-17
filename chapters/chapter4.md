@@ -23,7 +23,7 @@ id: 4
     Throughout the hidden layers, relu activations are used
 <codeblock id="04_01">
 
-Fill in the blanks.
+Use a relu activation for the hidden layers.
 
 </codeblock>
 </exercise>
@@ -41,7 +41,7 @@ Fill in the blanks.
 
 <codeblock id="04_02">
 
-Fill in the blanks.
+You can specify the dropout rates in the parameters of the layer.
 
 </codeblock>
 </exercise>

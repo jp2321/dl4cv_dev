@@ -92,7 +92,7 @@ Well done!
     Code a resnet 34 architecture
 <codeblock id="05_01">
 
-Fill in the blanks.
+What is the main path and what belongs to the skip connection?
 
 </codeblock>
 </exercise>
@@ -102,7 +102,7 @@ Fill in the blanks.
     We assume the following simplifications: All layers in a block have the same number of filters/same number of filters in the bottleneck
 <codeblock id="05_02">
 
-Fill in the blanks.
+Addition or concatenation?
 
 </codeblock>
 </exercise>
@@ -115,9 +115,10 @@ Fill in the blanks.
 </exercise>
 
 <exercise id="33"  title="Hands on - Transfer Learning">
-    Fill in the gaps
+    Fill in the gaps so that the transfer model is connected to the input.
+    Connect the output of it to the new top layers. Freeze the first 10 layers.
 <codeblock id="05_03">
-
+	Freezing the layers is equal to set trainable to false.
 </codeblock>
 </exercise>
 

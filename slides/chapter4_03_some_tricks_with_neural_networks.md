@@ -31,7 +31,8 @@ Normalization is easy as most of them use values between 0 and 255
 According to min-max normalization, x_normalized = (x-min)/(max-min) which can be simplified to diving the image by 255.0
 
 There is a downside to normalization, and it comes in the form of hardware requirements: 
-Instead of being an unsigned integer of 8 bits, now the pixel values are floating points (usually 32 bits)
+Instead of being an unsigned integer of 8 bits, now the pixel values are floating points (usually 32 bits).
+
 Thus, the data size is quadrupled!
 
 Note: More information can be found <a href="https://machinelearningmastery.com/how-to-normalize-center-and-standardize-images-with-the-imagedatagenerator-in-keras/"> here </a>
@@ -148,4 +149,4 @@ Brownlee, J. (2019). How to Normalize, Center, and Standardize Image Pixels in K
 Zhang, Y. (2017). Number of Parameters in Dense and Convolutional Layers in Neural Networks. Retrieved from: https://medium.com/@zhang_yang/number-of-parameters-in-dense-and-convolutional-neural-networks-34b54c2ec349 Last access: 26.03.2020
 
 ---
-# Wait for chapter 5 ...
+# Let's do some coding ...

@@ -11,11 +11,13 @@ type: slides
 - Vanishing gradient problem
 - Optimal kernel size
 
-Note: Up to the point, all necessary techniques to train a CNN were introduced. However, it is worthwhile to discuss different design decisions in the architecture of neural networks. We will discover architectures using different kernel sizes for discovering large as well as small representations of the objects as well as techniques against the vanishing gradient problem. Loosely speaking, networks that are very deep with 100 layers, the weight updates can get so small, because of the gradients that, they vanish. This holds especially true for layers near the input. Thus, the neurons in the top of the network (near the output) learn very fast, while the other neurons need a lot of time to adjust. As a consequence, a very deep network is not able to learn the object representation and consequently are not able to outperform a network with fewer layers, although in theory, it should have more capacity to learn.  
+Note: Up to the point, all necessary techniques to train a CNN were introduced. However, it is worthwhile to discuss different design decisions in the architecture of neural networks. We will discover architectures using different kernel sizes for discovering large as well as small representations of the objects as well as techniques against the vanishing gradient problem. Loosely speaking, networks that are very deep with 100 layers, the weight updates can get so small, because of the gradients that, they vanish. This holds especially true for layers near the input. Thus, the neurons in the top of the network (near the output) learn very fast, while the other neurons need a lot of time to adjust. As a consequence, a very deep network is not able to learn the object representation and consequently are not able to outperform a network with fewer layers, although in theory, it should have more capacity to learn. 
 
-Most of the architectures were tested in the ImageNet Challenge. In this challenge, the network needs to classify 1000 different objects (people, cars, ships, flowers, etc.) as accurately as possible. For training, there are 1000s of images per category. The dataset is a commonly used benchmark to test classification algorithms on its performance.
+Moreover, the question arises what is the optimal kernel size and how to find it. 
 
 In the following slides, we will discuss different architecutres, their features, strenght and weaknessess.
+
+Most of the architectures were tested in the ImageNet Challenge. In this challenge, the network needs to classify 1000 different objects (people, cars, ships, flowers, etc.) as accurately as possible. For training, there are 1000s of images per category. The dataset is a commonly used benchmark to test classification algorithms on its performance.
 
 ---
 

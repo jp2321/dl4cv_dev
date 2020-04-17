@@ -8,7 +8,7 @@ type: chapter
 id: 4
 ---
 
-<exercise id="25" title="What is a cnn?" type="slides">
+<exercise id="25" title="What is a CNN?" type="slides">
 
 <slides source="chapter4_01_cnn">
 </slides>
@@ -18,8 +18,8 @@ id: 4
 <exercise id="26"  title="Hands on - CNNs">
     Use a convolutional neural network for classifying the 32 by 32 colored images.
     The first convolutional layer should have 16 filters with a 3 by 3 kernel, followed by a max pooling.
-    The second convolutional layer should have 32 filters with a 3 by 3 kernel
-    The first fully connected layer should connect to a flatten and have 32 neurons
+    The second convolutional layer should have 32 filters with a 3 by 3 kernel.
+    The last convolutional layer should be connected via a flatten layer to a dense layer with 32 neurons.
     Throughout the hidden layers, relu activations are used
 <codeblock id="04_01">
 
@@ -46,7 +46,7 @@ Fill in the blanks.
 </codeblock>
 </exercise>
 
-<exercise id="29" title="Performance comparision">
+<exercise id="29" title="Performance comparison">
     Execute the notebook 02_cnn.ipynb.
     What are the results comparing model 1, model 2 and model 3
 <choice id=1>
@@ -108,7 +108,7 @@ This is not the correct answer. Even in this small example, the computer goes Ou
 
 </exercise>
 
-<exercise id="31" title="Play with the CNNs">
+<exercise id="31" title="Analyse different CNNs">
 
 Use the Cifar 10 Datasets. Try out different settings of a CNN with: 
 

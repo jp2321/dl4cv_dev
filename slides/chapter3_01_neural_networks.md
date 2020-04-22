@@ -97,7 +97,7 @@ Thus, most often mini-batch stochastic gradient is used, where after for each mi
 ---
 
 # Activation functions
-<img src="vl2/activation_functions.png">
+<img src="vl2/activation_functions.png" width="65%">
 
 Source: Jain, 2019
 
@@ -129,6 +129,12 @@ A list of different activation function and their mathematical properties can be
 Source: Rohrer (2017)
 
 Note: This video explains very well how a neural network works.
+
+---
+
+# Tensorflow 
+
+Note: This course will use Googles Tensorflow library for deep learning. Tensorflow has the opportunity to write basic tensorflow code for developing new layers and algorithms as well as to use the high-level Keras API. Keras is a wrapper for different deep learning frameworks, which is easy to use and a good start for making first experiences in deep learning. The most used deep learning functions are precoded, so that just the parameters have to be defined and the model needs to be "stacked" together by combing different layers. This course will focus on using the functional API of Keras, providing more flexibilty to the Sequential API for building advanced models. 
 
 ---
 
@@ -169,6 +175,7 @@ def simple_model():
 ```
 
 Note: For the hidden layer, relu activations are used for the output layer sigmoid activations as there is just one class. In this course, we will use the functional API of Keras. Instead of the sequential API where layers can be stacked, we can create more complex architectures with the functional API. To connect two layers, create the layer with calling one layer type from the layers package and add the previous layer where it should connect in the brackets after the call
+In the example in the slides, you can see that the hidden layer is first defined and than connected to the input_layer. 
 
 ---
 

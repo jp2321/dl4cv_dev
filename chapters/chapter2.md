@@ -1,7 +1,7 @@
 ---
-title: 'Chapter 2: From black and white to color ...'
+title: 'Chapter 2: Image manipulation and feature extraction ...'
 description:
-  'This chapter will introduce different image manipulation techniques'
+  'This chapter will guide you from black and white images to feature extraction'
 prev: /chapter1
 next: /chapter3
 type: chapter
@@ -188,4 +188,8 @@ This is not the correct answer
 <codeblock id="02_04">
     The colormapping for showing the image should correspond to the greyscaled input
 </codeblock>
+</exercise>
+
+<exercise id="16" title="Hands-on your turn">
+	Select some images that you like. Create a notebook (for example in Colab) and perform the reading of the image as black and white, colored images, edge detection, hog transformation, resizing, slicing and dicing etc. to practise your image preprocessing skills. Familiarize yourself the the documentation of CV2 and scikit-image.
 </exercise>

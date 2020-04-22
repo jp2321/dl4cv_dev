@@ -5,7 +5,7 @@
     "description": "This course will give you a good overview of the most intersting methods in computer vision. It will start from simple image manipulation techniques via a classical ML way to analysis images to CNNs, object detection, image segmentation and more. Stay tuned.",
     "bio": "Provided by Data Analytics Group of Paderborn University",
     "siteUrl": "https://wiwi.uni-paderborn.de/dep3/mueller/",
-    "twitter": "spacy_io",
+    "twitter": "",
     "fonts": "IBM+Plex+Mono:500|IBM+Plex+Sans:700|Lato:400,400i,700,700i",
     "testTemplate": "from wasabi import Printer\n__msg__ = Printer()\n__solution__ = \"\"\"${solution}\"\"\"\n\n${solution}\n\n${test}\n\ntry:\n    test()\nexcept AssertionError as e:\n    __msg__.fail(e)",
     "juniper": {
@@ -18,7 +18,7 @@
     "showProfileImage": false,
     "footerLinks": [
         { "text": "Website", "url": "https://wiwi.uni-paderborn.de/dep3/mueller/" },
-        { "text": "Source", "url": "https://git.uni-paderborn.de/kucklick/dl4cv_dev" },
+        { "text": "Source", "url": "https://github.com/jp2321/dl4cv_dev.git" },
         { "text": "Built with ♥", "url": "https://github.com/ines/course-starter-python" }
     ],
     "theme": "#de7878"

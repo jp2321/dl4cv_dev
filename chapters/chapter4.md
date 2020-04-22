@@ -8,14 +8,14 @@ type: chapter
 id: 4
 ---
 
-<exercise id="25" title="What is a CNN?" type="slides">
+<exercise id="26" title="What is a CNN?" type="slides">
 
 <slides source="chapter4_01_cnn">
 </slides>
 
 </exercise>
 
-<exercise id="26"  title="Hands on - CNNs">
+<exercise id="27"  title="Hands on - CNNs">
     Use a convolutional neural network for classifying the 32 by 32 colored images.
     The first convolutional layer should have 16 filters with a 3 by 3 kernel, followed by a max pooling.
     The second convolutional layer should have 32 filters with a 3 by 3 kernel.
@@ -28,13 +28,13 @@ Use a relu activation for the hidden layers.
 </codeblock>
 </exercise>
 
-<exercise id="27" title="Batch Norm and Spatial Dropout" type="slides">
+<exercise id="28" title="Batch Norm and Spatial Dropout" type="slides">
 
 <slides source="chapter4_02_batch_norm_spatial_dropout">
 </slides>
 </exercise>
 
-<exercise id="28"  title="Hands on - CNNs (2)">
+<exercise id="29"  title="Hands on - CNNs (2)">
     This given network is overfitting. Therefore one decides to use Spatial Dropouts for the convolutional layers as well as Dropouts for the fully connected layers.
 
     Dropout rates are 0.2, 0.5, 0.5 - Fill in the blanks
@@ -46,9 +46,9 @@ You can specify the dropout rates in the parameters of the layer.
 </codeblock>
 </exercise>
 
-<exercise id="29" title="Performance comparison">
-    Execute the notebook 02_cnn.ipynb.
-    What are the results comparing model 1, model 2 and model 3
+<exercise id="30" title="Performance comparison">
+    Execute the notebook convolutional_neural_network.ipynb.
+    What are the results comparing simple_nn (model 1), batch_norm_nn (model 2) and dropout_nn (model 3)
 <choice id=1>
 
 <opt text="Model 3 is performing worse because the network is very small (underfitting) and dropping out essential information is decreasing the performance dramatically" correct="true">
@@ -102,13 +102,13 @@ This is not the correct answer. Even in this small example, the computer goes Ou
 
 </exercise>
 
-<exercise id="30" title="Some tricks for deep learning" type="slides">
+<exercise id="31" title="Some tricks for deep learning" type="slides">
     <slides source="chapter4_03_some_tricks_with_neural_networks">
 </slides>
 
 </exercise>
 
-<exercise id="31" title="Analyse different CNNs">
+<exercise id="32" title="Analyse different CNNs">
 
 Use the Cifar 10 Datasets. Try out different settings of a CNN with: 
 

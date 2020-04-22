@@ -8,14 +8,14 @@ type: chapter
 id: 8
 ---
 
-<exercise id="44" title="Adversarial attacks" type="slides">
+<exercise id="50" title="Adversarial attacks" type="slides">
 
 <slides source="chapter8_01_adversarial attacks">
 </slides>
 
 </exercise>
 
-<exercise id="45" title="Adversarial attacks Questions">
+<exercise id="51" title="Adversarial attacks Questions">
 <choice id=1>
 
 <opt text="White-box attacks are attacks where no access to the models parameters exist">

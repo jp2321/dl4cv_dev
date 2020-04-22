@@ -108,7 +108,7 @@ This is not the correct answer. Even in this small example, the computer goes Ou
 
 </exercise>
 
-<exercise id="32" title="Analyse different CNNs">
+<exercise id="32" title="Playing with the code - Analyse different CNNs">
 
 Use the Cifar 10 Datasets. Try out different settings of a CNN with: 
 

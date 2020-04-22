@@ -8,14 +8,14 @@ type: chapter
 id: 7
 ---
 
-<exercise id="40" title="Image segmentation" type="slides">
+<exercise id="46" title="Image segmentation" type="slides">
 
 <slides source="chapter7_01_semantic_segmentation">
 </slides>
 
 </exercise>
 
-<exercise id="41" title="Image segmentation Theorie Questions">
+<exercise id="47" title="Image segmentation Theorie Questions">
 <choice id=1>
 
 <opt text="FCN-32 have often the best output as they are very fine-granular">
@@ -40,7 +40,7 @@ Perfect!
 
 </exercise>
 
-<exercise id="42" title="Coding a FCN-16" >
+<exercise id="48" title="Coding a FCN-16" >
 	Code a FCN-16 Network. Use 4096 and kernel size (1,1) in the last layer of the encoding.
 	<img src="vl6/fcn_16.png" width=500 height=5‚00>
 	Image source: Tsang (2018)
@@ -50,7 +50,7 @@ Perfect!
 </exercise>
 
 
-<exercise id="43" title="Image segmentation Results of the Notebook">
+<exercise id="49" title="Image segmentation Results of the Notebook">
 	Run the given notebook about image segmentation.
 <choice id="1">
 

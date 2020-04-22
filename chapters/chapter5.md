@@ -8,14 +8,14 @@ type: chapter
 id: 5
 ---
 
-<exercise id="28" title="CNN Architectures" type="slides">
+<exercise id="33" title="CNN Architectures" type="slides">
 
 <slides source="chapter5_01_architectures">
 </slides>
 
 </exercise>
 
-<exercise id="29" title="Different Architectures Repetition">
+<exercise id="34" title="Different Architectures Repetition">
 The VGG network
 <choice id=1>
 
@@ -88,7 +88,7 @@ Well done!
 
 </exercise>
 
-<exercise id="30"  title="Hands on - ResNets">
+<exercise id="35"  title="Hands on - ResNets">
     Code a resnet 34 architecture
 <codeblock id="05_01">
 
@@ -97,7 +97,7 @@ What is the main path and what belongs to the skip connection?
 </codeblock>
 </exercise>
 
-<exercise id="31"  title="Hands on - Inception">
+<exercise id="36"  title="Hands on - Inception">
     Fill in the gaps for the inception module. We will code a very small model here with 3 inception blocks.
     We assume the following simplifications: All layers in a block have the same number of filters/same number of filters in the bottleneck
 <codeblock id="05_02">
@@ -107,14 +107,14 @@ Addition or concatenation?
 </codeblock>
 </exercise>
 
-<exercise id="32" title="Transfer Learning" type="slides">
+<exercise id="37" title="Transfer Learning" type="slides">
 
 <slides source="chapter5_02_transfer_learning">
 </slides>
 
 </exercise>
 
-<exercise id="33"  title="Hands on - Transfer Learning">
+<exercise id="38"  title="Hands on - Transfer Learning">
     Fill in the gaps so that the transfer model is connected to the input.
     Connect the output of it to the new top layers. Freeze the first 10 layers.
 <codeblock id="05_03">
@@ -122,7 +122,7 @@ Addition or concatenation?
 </codeblock>
 </exercise>
 
-<exercise id="34" title="Transfer Learning">
+<exercise id="39" title="Transfer Learning">
     How did the parameters changed in the previous exercise?
 <choice>
 

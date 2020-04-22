@@ -142,10 +142,12 @@ Classifcation problems: cross-entropy
 
 Regression problem: Mean squared error
 
+Source: Brownlee, 2019.
+
 Note: The loss function describes mathematically the errors in the optimization problem. 
 The goal is to minimze the loss functions, so that predictions and target values are as close a possible. Neural network use the maximum likelihood theorem that finds the optimum parameter values (weights), given an input to fit the data distribution of the target as close a possible based on the training data. For classification often the loss functions cross-entropy is used that minimizes the difference between the predicted class probability and the true class probability. As we know for the training data to which class the observations belongs and to which classes not, these are labeled with 1 respecitly with 0. The loss function for regression problems is the mean squared difference between the prediction and the true value, also known as mean squared error. However, there are many more loss functions like: mean absolute deviation for regression or hinge loss for classification.
 
-Source: Brownlee, 2019.
+
 
 ---
 

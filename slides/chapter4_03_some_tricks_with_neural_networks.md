@@ -130,7 +130,7 @@ Note: For the dense layer, each output of the subsequent layer is connected to a
 Source: Becker (2018)
 
 Note: There is a debate going on if pooling should be replaced by strides. 
-Many networks are using pooling - this more the "historic way".
+Many networks are using pooling - this is more the "historic way".
 New network architecture (we will discuss them next week) are replacing these with strides
 
 

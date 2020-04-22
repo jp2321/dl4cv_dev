@@ -80,7 +80,7 @@ In the final step, the updated weights of the network are the weights bevor the 
 
 ---
 
-# Gradient descent
+# Gradient descent and other optimizers
 
 <img src="vl2/gradient_descent.png" alt="This image is in /static" width="70%">
 
@@ -93,6 +93,18 @@ There are three ways of how often the weight update during training is performed
 The other extreme is stochastic gradient descent. The weights are updated after each sample in the training set. While the update frequency is high, computation might be slow as calculating the gradients and derivates is a complex computation. Thus training time is increased. Additionally, the weights might have a high variance because of a large variance of the training set, making the training process wiggly. Therefore, the learning rate might be lowered.
 
 Thus, most often mini-batch stochastic gradient is used, where after for each mini-batch, for example, 32 samples, the weights are updated.
+
+Epochs are the number of passes through the whole training set. In other words, a epoch is one round of training. Neuronal networks need many "rounds" of training, until the weights are adjusted. There is no clear number of how many epochs are necessary, as the update frequency of the weights (gradient descent, mini-batch gradient descent, stochastic gradient descent), the strength of the update (learning rate), the complexity of the problem and many more factors influnece the optimal number. Often an so called early-stopping is applied, so the training stops, when no significant performance increase can be reached to prevent the network from overfitting.
+
+Modern deep learning models use often other methods for optimization. The Adam optimizer is a well known and used alternative, which uses instead of one single fixed learning rate for the whole model as in stochastic/mini-batch gradient descent (SGD), a learning rate for each parameter, which is adapted/changed during the learning process. It therefore combines the advantage of AdaGrad and RMSPop optimizers. This course will often choose Adam because of the fast convergence of the algorithm and consequently less epochs needed in training.
+
+We will not have a deeper discussion of optimizers in this course, however, if you are interested, the further readings give more details:
+
+<a href="https://machinelearningmastery.com/adam-optimization-algorithm-for-deep-learning/"> Gentle Introduction to the Adam Optimization </a>
+
+<a href="http://papers.nips.cc/paper/7003-the-marginal-value-of-adaptive-gradient-methods-in-machine-learning"> The marginal value of adaptive gradient methods in machine learning </a>
+
+The second paper discusses the advantages and differences between adaptive and stochastic optimization methods. 
 
 ---
 
@@ -120,6 +132,23 @@ A list of different activation function and their mathematical properties can be
 
 ---
 
+# Loss function
+
+- Neuronal network is framed as an optimization problem
+- Using Maximum Likelihood estimation
+
+Loss functions that are often used:
+Classifcation problems: cross-entropy
+
+Regression problem: Mean squared error
+
+Note: The loss function describes mathematically the errors in the optimization problem. 
+The goal is to minimze the loss functions, so that predictions and target values are as close a possible. Neural network use the maximum likelihood theorem that finds the optimum parameter values (weights), given an input to fit the data distribution of the target as close a possible based on the training data. For classification often the loss functions cross-entropy is used that minimizes the difference between the predicted class probability and the true class probability. As we know for the training data to which class the observations belongs and to which classes not, these are labeled with 1 respecitly with 0. The loss function for regression problems is the mean squared difference between the prediction and the true value, also known as mean squared error. However, there are many more loss functions like: mean absolute deviation for regression or hinge loss for classification.
+
+Source: Brownlee, 2019.
+
+---
+
 # Neural network video explanation
 
 <html>
@@ -133,6 +162,8 @@ Note: This video explains very well how a neural network works.
 ---
 
 # Tensorflow 
+
+<img src="vl2/Tensorflow_logo.png" width="35%">
 
 Note: This course will use Googles Tensorflow library for deep learning. Tensorflow has the opportunity to write basic tensorflow code for developing new layers and algorithms as well as to use the high-level Keras API. Keras is a wrapper for different deep learning frameworks, which is easy to use and a good start for making first experiences in deep learning. The most used deep learning functions are precoded, so that just the parameters have to be defined and the model needs to be "stacked" together by combing different layers. This course will focus on using the functional API of Keras, providing more flexibilty to the Sequential API for building advanced models. 
 
@@ -214,6 +245,7 @@ By calling the fit method, the network could be trained.
 <h3>References</h3>
 <list>
     <li>Babel, P. (2019). Deep Neural Networks from scratch in Python. https://towardsdatascience.com/deep-neural-networks-from-scratch-in-python-451f07999373  </li>
+    <li> Brownlee, J. (2019). Loss and Loss functions for training deep learning neural networks. Retrieved from: https://machinelearningmastery.com/loss-and-loss-functions-for-training-deep-learning-neural-networks/ 
     <li>Jain, P. (2019). Complete Guide of Activation functions. Retrieved from: https://towardsdatascience.com/complete-guide-of-activation-functions-34076e95d044</li>
     <li>Raschka, S., & Mirjalili, V. (2019). Python Machine Learning: Machine Learning and Deep Learning with 
             Python, scikit-learn, and TensorFlow 2. Packt Publishing Ltd.</li>

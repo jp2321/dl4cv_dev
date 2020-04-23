@@ -47,7 +47,7 @@ This is not the correct answer
 
 <exercise id="6" title="Hands on image reading">
 
-Read the dog.jpeg image from disk. It is in the exercise folder.
+Read the dog.jpeg image from disk. It is in the exercises folder.
 First, read it as a black and white image, second as a colored image.
 Display both image.
 

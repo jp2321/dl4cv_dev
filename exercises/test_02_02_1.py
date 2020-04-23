@@ -5,6 +5,6 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    assert  np.array_equal(subset,color_img[79:126,49:106,:])==True, "Are you sure this is the right dice"
+    assert  np.array_equal(subset,color_img[80:126,48:106,:])==True, "Are you sure this is the right dice"
 
     __msg__.good("Great job!")

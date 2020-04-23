@@ -15,9 +15,11 @@ Note: Up to the point, all necessary techniques to train a CNN were introduced. 
 
 Moreover, the question arises what is the optimal kernel size and how to find it. 
 
-In the following slides, we will discuss different architecutres, their features, strenght and weaknessess.
+In the following slides, we will discuss different architectures, their features, strenght and weaknessess.
 
 Most of the architectures were tested in the ImageNet Challenge. In this challenge, the network needs to classify 1000 different objects (people, cars, ships, flowers, etc.) as accurately as possible. For training, there are 1000s of images per category. The dataset is a commonly used benchmark to test classification algorithms on its performance.
+
+Keras includes the latest architectures, so that these can be used without a large implementation effort. Moreover, they can be incorprated and initalized with the weights from the ImageNet Challenge, so that transfer learning is possible. For a better understanding, this chapter will have a deep dive into the architectures and code those from scratch.
 
 ---
 
@@ -35,7 +37,7 @@ Source: Krizhevsky, Sutskever, & Hinton (2012)
 img source: https://towardsdatascience.com/the-w3h-of-alexnet-vggnet-resnet-and-inception-7baaaecccc96
 
 Note: AlexNet was the first winner of the 2012 ImageNet Challenge.
-It was invented in 2012 by Krizhevsky, Sutskever, and Hinton and is known as one major milestone in computer vision. It was the first network trained on a large dataset and the first one using large filter sizes, which was not computational feasible bevor. The original model was split into two and trained on two GPUs because of memory restrictions (Krizhevsky, Sutskever, & Hinton, 2012). 
+It was invented in 2012 by Krizhevsky, Sutskever, and Hinton and is known as one major milestone in computer vision. It was the first network trained on a large dataset and the first one using large filter sizes, which was not computational feasible before. The original model was split into two and trained on two GPUs because of memory restrictions (Krizhevsky, Sutskever, & Hinton, 2012). 
 
 ---
 
@@ -92,7 +94,7 @@ The phenomenon is called vanishing gradient problem. In large networks, the weig
 
 Source: He, Zhang, Ren, & Sun (2016)
 
-Note: Up to new different versions of the residual blocks are used. 
+Note: Up to five new different versions of the residual blocks are used. 
 
 ---
 
@@ -102,7 +104,7 @@ Note: Up to new different versions of the residual blocks are used.
 
 Source: He, Zhang, Ren, & Sun (2016)
 
-Note: This image shows the Resnet 34 architecture. The first convolutional layer is using a stride of 2 with followed by a max-pooling.  After these, the residual blocks are following. Two convolutional blocks are following with  "f" number of filters. In the original implementation, the first convolution is followed by batch normalization, relu activation, the second convolution, and another batch normalization before it is added to the shortcut path. The shortcut path (arrow) is skipping these blocks to prevent the vanishing gradients and to keep some representation of the previous layer. After 3 residual blocks, the number of filters is increased. In each residual block, the number of filters is increased. In the first convolution in the block, convolutions with strides 2 are used to shrink the input dimensions. The strided convolution replaces max-pooling layers. To connect also the shortcut to the decreased input size, in the short a 1 by 1 convolution with the same strides is performed. Moreover, every convolution needs the padding same so that the output size equals the input size. This is necessary for adding the results of the shortcut and the normal path. Otherwise, the tensors would different shapes and could not be added together.
+Note: This image shows the Resnet 34 architecture. The first convolutional layer is using a stride of 2 with followed by a max-pooling.  After these, the residual blocks are following. Two convolutional blocks are following with  "f" number of filters. In the original implementation, the first convolution is followed by batch normalization, relu activation, the second convolution, and another batch normalization before it is added to the shortcut path. The shortcut path (arrow) is skipping these blocks to prevent the vanishing gradients and to keep some representation of the previous layer. After 3 residual blocks, the number of filters is increased. In each residual block, the number of filters is increased. In the first convolution in the block, convolutions with strides 2 are used to shrink the input dimensions. The strided convolution replaces max-pooling layers. To connect also the shortcut to the decreased input size, in the short a 1 by 1 convolution with the same strides is performed. Moreover, every convolution needs the padding with the parameter "same" so that the output size equals the input size. This is necessary for adding the results of the shortcut and the normal path. Otherwise, the tensors would different shapes and could not be added together.
 
 For a large image click <a href="https://miro.medium.com/max/306/1*CEg9KOO0mwgTmttvv0pSzQ.png" target="blank"> here </a>
 
@@ -142,7 +144,7 @@ Note: This is a good description of why Resnet works
 
 Source: Szegedy, Ioffe, Vanhoucke, Alemi (2015)
 
-Note: The inception architecture was introduced in 2015 by Szegedy, Ioffe, Vanhoucke, Alemi (Google). It is the winner of the ImageNet 2014 and also uses multi-branches. It is challenging to know the right filter size that needs to be defined a priori to training. Distant objects in an image might be very small, while the same object in the near might be a central component of the image. The main concept of Inception is applying different filter sizes for the convolved images accounting for the different sized objects. Thus, the input is split up to different filters, mostly 1x1, 3x3, 5x5 convolution, and a 3 x 3 max pooling. The results of the different filters are concatenated. Again, as in ResNet, the padding "same" is used to keep the dimensions. The 1x1 convolution is used for downsampling. Otherwise, the output would quadruple from block to block. There is multiple version of Inception, improving the architecture over time, introducing in v2 the idea of stacked convolutions (similar to VGG), in v3 factorized convolutions to speed up computation and in v4 residual blocks (similar to ResNet) (Szegedy, Ioffe, Vanhoucke, Alemi, 2015, Vasilev, 2019). Factorized convolutions are applying instead of an NxN convolution first an Nx1 and afterward a 1xN convolutional operation, increasing efficiency.
+Note: The inception architecture was introduced in 2015 by Szegedy, Ioffe, Vanhoucke, Alemi (Google). It is the winner of the ImageNet 2014 and also uses multi-branches. It is challenging to know the right filter size that needs to be defined a priori to training. Distant objects in an image might be very small, while the same object in the near might be a central component of the image. The main concept of Inception is applying different filter sizes for the convolved images accounting for the different sized objects. Thus, the input is split up to different filters, mostly 1x1, 3x3, 5x5 convolution, and a 3 x 3 max pooling. The results of the different filters are concatenated. Again, as in ResNet, the padding "same" is used to keep the dimensions. The 1x1 convolution is used for downsampling. Otherwise, the output would quadruple from block to block. There are multiple versions of Inception, improving the architecture over time, introducing in v2 the idea of stacked convolutions (similar to VGG), in v3 factorized convolutions to speed up computation and in v4 residual blocks (similar to ResNet) (Szegedy, Ioffe, Vanhoucke, Alemi, 2015, Vasilev, 2019). Factorized convolutions are applying instead of an NxN convolution first an Nx1 and afterward a 1xN convolutional operation, increasing efficiency.
 
 ---
 

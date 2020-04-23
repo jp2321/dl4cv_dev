@@ -3,7 +3,7 @@ title: 'Chapter 7: Semantic Segmentation'
 description:
   'This chapter will introduce different techniques for semantic segmentation'
 prev: /chapter6
-next: /chapterend
+next: /chapter8
 type: chapter
 id: 7
 ---

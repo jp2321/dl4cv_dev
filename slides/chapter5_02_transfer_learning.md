@@ -10,15 +10,17 @@ type: slides
 
 - Extract generalizable knowledge to another task or domain
     
-- Example:
-    Matrix multiplication in calculus class
-    Transfer it to this course
+- Anaology in the real world:
+
+    Learn matrix multiplication in calculus class
+
+    Transfer it to this course to understand the maths of neuronal networks
     
 - Aim: Increase performance
 - Few observations in the target domain
 - Task is very new
 
-Note: Most of the architectures described above are getting famous by using in Transfer Learning. Transfer Learning thereby describes the process of transferring knowledge from one domain or task to another and reuse parts of a trained model. The overall aim is to boost performance when a) fewer observations are in the target domain and training a machine learning model is not possible or b) the task is very new, and thus no data is available. 
+Note: Most of the architectures described above are getting famous by being used in Transfer Learning. Transfer Learning thereby describes the process of transferring knowledge from one domain or task to another and reuse parts of a trained model. The overall aim is to boost performance when a) fewer observations are in the target domain and training a machine learning model is not possible or b) the task is very new, and thus no data is available. 
 
 ---
 

@@ -10,5 +10,5 @@ def test():
     assert resnet_34.layers[25].output.shape[1] == 28, "Did you downsample="
     assert resnet_34.layers[25].get_config()["filters"] == 128, "What are the number of filters in the second conv block?"
     assert resnet_34.layers[25].get_config()["padding"] == "same", "Did you use same padding?"
-    assert resnet_34.layers[25].get_config()["kernel_size"] == (1,1), "Did you use 1,1 convolutions?"
+    assert resnet_34.layers[30].get_config()["kernel_size"] == (1,1), "Did you use 1,1 convolutions?"
     __msg__.good("WELL DONE!")

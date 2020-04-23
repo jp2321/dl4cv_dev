@@ -136,6 +136,6 @@ This is not the correct answer
 	Use the Notebook provided in the Github and try out different settings for the Dense Neural network. Vary the number of hidden layers, the number of perceptrons per layer, activation functions, learning rates, batch sizes. What do you notice? Compare the performance to the ML Models with HOG/Edge Detection?
 </exercise>
 
-<exercise id="25" title="Play with the code IIII">
+<exercise id="25" title="Play with the code IV">
 	Create a new model and test different parameters for the dropout layer.
 </exercise>

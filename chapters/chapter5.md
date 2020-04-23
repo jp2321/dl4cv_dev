@@ -89,7 +89,7 @@ Well done!
 </exercise>
 
 <exercise id="35"  title="Hands on - ResNets">
-    Code a resnet 34 architecture
+    Code a resnet 34 architecture. For a large image click <a href="https://miro.medium.com/max/1000/1*kBlZtheCjJiA3F1e0IurCw.png" target="blank"> here </a>
 <codeblock id="05_01">
 
 What is the main path and what belongs to the skip connection?
@@ -123,7 +123,7 @@ Addition or concatenation?
 </exercise>
 
 <exercise id="39" title="Transfer Learning">
-    How did the parameters changed in the previous exercise?
+    How did the parameters change in the previous exercise?
 <choice>
 
 <opt text="The trainable parameters decreased, the non-trainable parameters increased" correct="true">

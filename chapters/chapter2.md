@@ -134,19 +134,19 @@ Correct!
 
 <exercise id="13" title="Edge detection quiz">
 <choice id=1>
-<opt text="In edge detection gaussian kernels are used for de-noiseing" correct="true">
+<opt text="In edge detection gaussian kernels are used for denoising" correct="true">
 
 Correct!
 
 </opt>
 
-<opt text="Sobel kernels are used in Canny Edge detection for de-noiseing">
+<opt text="Sobel kernels are used in Canny Edge detection for denoising">
 
 This is not the correct answer
 
 </opt>
 
-<opt text="De-noiseing is done on all three input channels">
+<opt text="Denoising is done on all three input channels">
 
 This is not the correct answer
 

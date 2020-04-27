@@ -8,14 +8,14 @@ type: chapter
 id: 8
 ---
 
-<exercise id="50" title="Adversarial attacks" type="slides">
+<exercise id="53" title="Adversarial attacks" type="slides">
 
 <slides source="chapter8_01_adversarial attacks">
 </slides>
 
 </exercise>
 
-<exercise id="51" title="Adversarial attacks Questions">
+<exercise id="54" title="Adversarial attacks Questions">
 <choice id=1>
 
 <opt text="White-box attacks are attacks where no access to the models parameters exist">
@@ -37,5 +37,16 @@ Perfect!
 </opt>
 
 </choice>
+
+</exercise>
+
+<exercise id="55" title="Playing with the code - Adversarial attacks">
+
+a) Select a dataset on your own. Train a Neural Network to perform the classifaction.
+
+b) Transform the test set and create adversarial examples - evaluate the performance in comparison to the original test set. 
+
+c) Retrain the network, now with original images and adversarial images (generated from the test set)
+Is the changing now the performance on the adversarial test set?
 
 </exercise>

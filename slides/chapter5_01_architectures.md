@@ -32,9 +32,7 @@ Keras includes the latest architectures, so that these can be used without a lar
 - Uses large kernels 
 - ~ 63 million parameters 
 
-Source: Krizhevsky, Sutskever, & Hinton (2012)
-
-img source: https://towardsdatascience.com/the-w3h-of-alexnet-vggnet-resnet-and-inception-7baaaecccc96
+Source: Krizhevsky, Sutskever, & Hinton (2012), Anwar (2018)
 
 Note: AlexNet was the first winner of the 2012 ImageNet Challenge.
 It was invented in 2012 by Krizhevsky, Sutskever, and Hinton and is known as one major milestone in computer vision. It was the first network trained on a large dataset and the first one using large filter sizes, which was not computational feasible before. The original model was split into two and trained on two GPUs because of memory restrictions (Krizhevsky, Sutskever, & Hinton, 2012). 
@@ -43,15 +41,14 @@ It was invented in 2012 by Krizhevsky, Sutskever, and Hinton and is known as one
 
 # VGG 
 
-<img src="vl4/vgg16.png" alt="This image is in /static" width="50%">
+<img src="vl4/vgg16.png" alt="This image is in /static" width="40%">
 
-Introduced by Simonyan and Zisserman 2014
-- Winner of ILSVRC-2014 Challenge
+- Introduced by Simonyan and Zisserman 2014, Winner of ILSVRC-2014 Challenge
 - Replacement of large filters by many small filters
 - "First" deep network structure
 - ~ 138 million parameters
 
-Source: Simonyan & Zisserman (2014)
+Source: Simonyan & Zisserman (2014), Neurohive (2018)
 
 Note: Visual Geometry Group (VGG) architecture was introduced by Simonyan and Zisserman in 2014, the winner of Imagenet 2013. As the complexity of the network grew, the training time was growing similarly. To reduce training time, the number of network parameters has to be reduced. Therefore, the authors introduced the concepts of stacking multiple convolutional layers with a smaller kernel together, providing the same effect as a convolutional layer with a large filter size.  However, the number of parameters is reduced compared to the larger convolution. Replacing an 7 by 7 convolution with C channels (7x7xC)=49C while 3 3 by 3 convolutions results in (3x3xC)x3=27C
 Consequently, the number of parameters is reduced by 44 \%. The reduction of parameters increases when the filter size increases. The existing VGG architecture can still be improved by using Batch Normalization, or Dropout layers, as well as a global pooling instead of the flatten layer to increase learning stability and reducing the network parameters (Simonyan & Zisserman, 2014, Vasilev, 2019).
@@ -60,9 +57,9 @@ Consequently, the number of parameters is reduced by 44 \%. The reduction of par
 
 # VGG - Replacement of large filter sizes
 
-<img src="vl4/vgg_block.png" alt="This image is in /static" width="40%">
+<img src="vl4/vgg_block.png" alt="This image is in /static" width="35%">
 
-img source: https://towardsdatascience.com/the-w3h-of-alexnet-vggnet-resnet-and-inception-7baaaecccc96
+img source: Anwar, (2018)
 
 Note: In this image, it can be seen that applying two 3 by 3 kernels after each other leads to an effective kernel size of 5 by 5. The 5 by 5 input is reduced to one single number. 
 
@@ -170,6 +167,7 @@ Source: Deeplearning.ai (2017a)
 <html>
 <h3>References</h3>
 <list>
+    <li> Anwar, A. (2019). Differences between AlexNet, VGGNet, ResNet and Inception. Retrieved from: https://towardsdatascience.com/the-w3h-of-alexnet-vggnet-resnet-and-inception-7baaaecccc96 </li>
     <li>Deeplearning.ai (2017a). Inception Network. Retrieved from: https://www.youtube.com/watch?v=KfV8CJh7hE0&feature=emb_title</li>
     <li>Deeplearning.ai (2017b). Inception Network Motvation: Retrieved from: https://www.youtube.com/watch?v=C86ZXvgpejM&feature=emb_title</li>
     <li>Deeplearning.ai (2017c). Resnets. Retrieved from: https://www.youtube.com/watch?v=ZILIbUvp5lk&feature=emb_title</li>
@@ -181,6 +179,8 @@ Source: Deeplearning.ai (2017a)
             conference on computer vision (pp. 630-645). Springer, Cham.</li>
         <li>Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). Imagenet classification with deep convolutional 
             neural networks. In Advances in neural information processing systems (pp. 1097-1105).</li>
+        <li>Neurohive. (2018). VGG16 - Convolutional Network for Classification and Detection. Retrieved from: https://neurohive.io/en/popular-networks/vgg16/</li>
+
         <li>Raschka, S., & Mirjalili, V. (2019). Python Machine Learning: Machine Learning and Deep Learning with 
             Python, scikit-learn, and TensorFlow 2. Packt Publishing Ltd.</li>
 </li>

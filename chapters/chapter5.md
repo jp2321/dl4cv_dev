@@ -144,3 +144,10 @@ This is not the correct answer
 
 </opt>
 </choice>
+</exercise>
+
+<exercise id="40" title="Playing with the code - Architecutres of CNNs">
+
+Use the architectures_cnn.ipynb and train a network on the Caltech 256 dataset. Perform a training-test split on your own and use the tensorflow data pipline for training. Try out one of the technologies learned in this chapter (VGG, ResNet, Inception, Transfer Learning).
+
+</exercise>

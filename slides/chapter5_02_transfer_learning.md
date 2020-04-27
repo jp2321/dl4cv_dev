@@ -54,7 +54,7 @@ Note: Two general strategies exist. Inductive learning uses the model in the sam
 
 <img src="vl4/transfer_1_1.png" alt="This image is in /static" width="50%">
 
-Image source: https://medium.com/@subodh.malgonde/transfer-learning-using-tensorflow-52a4f6bcde3e
+Image source: Malgonde, (2018)
 
 
 Note: For inductive learning, the top layer of the network (output layer) is cut-off and replaced by a domain-specific layer depending on the task. One other technique for both learning strategies if freezing layers. Thus, these layers are used in the feed-forward process of the network, but the weights are not updated in the backpropagation to keep the learned knowledge in the layers untouched.
@@ -100,6 +100,7 @@ Source: Deeplearning.ai (2017)
     <li>Deeplearning.ai (2017). Transfer Learning (C3W2L07). Retrieved from: https://www.youtube.com/watch?v=yofjFQddwHE</li>
         <li>Pan, S. J., & Yang, Q. (2009). A survey on transfer learning. IEEE Transactions on knowledge and data 
             engineering, 22(10), 1345-1359.</li>
+    <li>Malgonde, S. (2018). Transfer learning using Tensorflow. Retrieved from: https://medium.com/@subodh.malgonde/transfer-learning-using-tensorflow-52a4f6bcde3e </li>
     <li> Sarkar, D. (2018). A comprehensiv hands-on guide to transfer learning with real-word applications in deep learning. Retrieved from: https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a Last Access: 23.01.2020
 </li>
         <li>Torrey, L., & Shavlik, J. (2010). Transfer learning. In Handbook of research on machine learning 

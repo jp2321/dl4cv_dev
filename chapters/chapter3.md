@@ -125,7 +125,7 @@ This is not the correct answer
 
 
 <exercise id="22" title="Play with the code I">
-	Use the Notebook provided in the Github to try out HOG as a feature extractor combined with a Machine Learning Algorithm. What is the performance in F1 and accuracy?
+	Use the provided notebook "Deep_learning_neural_network" to try out HOG as a feature extractor combined with a Machine Learning Algorithm. What is the performance in F1 and accuracy?
 </exercise>
 
 <exercise id = "23" title="Play with the code II">
@@ -133,7 +133,7 @@ This is not the correct answer
 </exercise>
 
 <exercise id="24" title="Play with the code III">
-	Use the Notebook provided in the Github and try out different settings for the Dense Neural network. Vary the number of hidden layers, the number of perceptrons per layer, activation functions, learning rates, batch sizes. What do you notice? Compare the performance to the ML Models with HOG/Edge Detection?
+	Use the provided notebook and try out different settings for the Dense Neural network. Vary the number of hidden layers, the number of perceptrons per layer, activation functions, learning rates, batch sizes. What do you notice? Compare the performance to the ML Models with HOG/Edge Detection?
 </exercise>
 
 <exercise id="25" title="Play with the code IV">

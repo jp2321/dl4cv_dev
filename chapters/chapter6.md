@@ -46,8 +46,8 @@ This is not the correct answer.
 
 
 <exercise id="43"  title="Hands on - YOLO">
-    Fill in the blanks of the yolo network. Code the multi-output so that first the class prediction, afterwards the x1_prediction, y1_prediction, x2_prediction, y2_prediction are predicted. Assume that the network can detect 43 different classes
-    Note that the probability of the object is encoded in the network output of the classes. It is the probability distribution over all 43 classes. To include the output in a object classification task, it has to be transformed to a output containing only zeros and a one for the predicted class and the probability of the predicted class needs to be added in the result vector.
+    Fill in the blanks of the yolo network. Code the multi-output so that first the class prediction, afterwards the x1_prediction, y1_prediction, x2_prediction, y2_prediction are predicted. Assume that the network can detect 43 different classes. X1,y1 are annotating the left lower corner of the object, while X2,Y2 the right upper one.Note that the probability of the object is encoded in the network output of the classes. It is the probability distribution over all 43 classes. <br><br>
+    To include the output in a multi-object classification task, it has to be transformed to a output containing only zeros and a one for the predicted class and the probability of the predicted class needs to be added in the result vector. 
 <codeblock id="06_01">
 </codeblock>
 </exercise>

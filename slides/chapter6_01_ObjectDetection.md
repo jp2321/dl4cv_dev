@@ -8,6 +8,16 @@ Note: Instead of classifying the image into a category, often a more fine-granul
 
 ---
 
+# An simplified example 
+
+<img src="vl5/traffic_sign.png" width="50%">
+
+Note: This example shows a simplified version of an object detection task, where just one object in the image exists. To perform the object localization, the bounding box area needs to be predicted plus a classification of the object itself. 
+
+Sometimes the bounding box is framed (as this example) as the coordinates of two corners, where x1,y1 is the coordinate of edge, x2,y2 the coordinate of a diagonal edge. The height of the bounding box is y1-y2, and the width is x1-x2. Sometimes the dataset labels contain these measures. In other examples, as listed in theory on the next slide, the coordinates are annotated with b1 to b4. b1,b2 are x1,y1, and are one corner of the bounding box. b3 is the height of the bounding box, and b4 annotates the width of the bounding box.
+
+---
+
 # Bounding Boxes and outputs
 
 [b1,b2,b3,b4,p1,c1,c2, ...cn]
@@ -42,12 +52,16 @@ Source: Vasilev, 2019
 # Types object detection networks
 
 One stage approach
+
         Detection and classification performed in one step/network
+
         Example: YOLO
 
 
 Two stage approach
+
     Step 1: Proposing interesting regions
+    
     Step 2: Classification and Bounding Box Regression of the regions
     Example: Fast R-CNN, Faster R-CNN
 
@@ -125,7 +139,9 @@ Note: Yolo is up to now the fastest method for object detection. As it is built 
 
 Source: Rosenbrock, 2016
 
-Note: For the described methods, the IoU concept is used to denoise the predictions. IoU stands for intersection over union, where for all the derived object predictions, the area of overlap is divided by the area of union. Most of the time, a fixed threshold, for example, 0.5, is applied, discarding all the predicted bounding boxes and detection above the threshold. This deletes multiple detections of the same object (Rosenbrock, 2016, Vasilev, 2019). This is also often known as non-max suppression.
+Note: For the described methods, the IoU concept is used to denoise the predictions. IoU stands for intersection over union, where for all the derived object predictions, the area of overlap is divided by the area of union. Most of the time, a fixed threshold, for example, 0.5, is applied, discarding all the predicted bounding boxes and detection above the threshold. This deletes multiple detections of the same object (Rosenbrock, 2016, Vasilev, 2019). This is also often known as non-max suppression. In the image in the slides, one bounding box is the prediction, the other box is the ground truth.
+
+IoU is not only used for the non-max suppression in the prediction but can also be used as a performance measure for the bounding box regression. It is extremely difficult to predict the bounding box and interpret the performance as a regression problem. The IoU states, how well the predicted bounding box overlaps with the ground truth labeled bounding box and thus combines the performance for the bounding box in one number (Ganesh, 2019).
 
 ---
 
@@ -160,12 +176,19 @@ Source: Deeplearning.ai (2017c)
 
 ---
 
+# Advice
+
+Note: While we will have a closer look at how object detection works on a simple case with just one object per image, it is worthwhile to use one of the various implementations of R-CNN, Fast/Faster R-CNN, Yolo etc. already written for Keras and Tensorflow.
+
+---
+
 <html>
 <h3>References</h3>
 <list>
     <li>Deeplearning.ai (2017). C4W3L08 Anchor Boxes. Retrieved from: https://www.youtube.com/watch?v=RTlwl2bv0Tg </li>
     <li>Deeplearning.ai (2017). CNN W3L05 : Bounding Box Predictions. Retrieved from: https://www.youtube.com/watch?v=yo9S3eNtkXc </li>
     <li>Deeplearning.ai (2017). C4W3L09 YOLO Algorithm. Retrieved from: https://www.youtube.com/watch?v=9s_FpMpdYW8 </li>
+    <li>Ganesh, P. (2019). Object Detection Simplified. Retrieved from: https://towardsdatascience.com/object-detection-simplified-e07aa3830954 </li>
     <li>Ghandi, R. (2018). R-CNN, Fast R-CNN, Faster R-CNN, YOlo. Retrieved from https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e Last accesss: 28.02.2020</li>
         <li>Raschka, S., & Mirjalili, V. (2019). Python Machine Learning: Machine Learning and Deep Learning with 
             Python, scikit-learn, and TensorFlow 2. Packt Publishing Ltd.</li>

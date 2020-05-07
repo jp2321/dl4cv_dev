@@ -27,3 +27,4 @@ def model(trainable=True, number_of_layers=None):
 
 transfer_learning_not_trainable=model(trainable=False, number_of_layers=None)
 first_five_layers_not_trainable=model(trainable=False, number_of_layers=_______) # index starts with zero
+print(first_five_layers_not_trainable.summary())

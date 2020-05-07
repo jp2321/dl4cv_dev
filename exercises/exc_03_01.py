@@ -1,7 +1,7 @@
 from tensorflow.keras import layers, models
 import numpy as np 
 
-X_train = np.zeros(60000,32,32) # create a dataset
+X_train = np.zeros((60000,32,32)) # create a dataset
 X_train_reshape=np.reshape(X_train,(60000, _____)) # reshape
 
 def model():

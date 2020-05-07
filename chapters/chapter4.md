@@ -48,29 +48,30 @@ You can specify the dropout rates in the parameters of the layer.
 
 <exercise id="30" title="Performance comparison">
     Execute the notebook convolutional_neural_network.ipynb.
-    What are the results comparing simple_nn (model 1), batch_norm_nn (model 2) and dropout_nn (model 3)
+    What are the results comparing simple_nn (model 1), batch_norm_nn (model 2) and dropout_nn 
+    (model 3)
 <choice id=1>
 
-<opt text="Model 3 is performing worse because the network is very small (underfitting) and dropping out essential information is decreasing the performance dramatically" correct="true">
+<opt text="In the example, model 3 is performing worse because the network is very small (underfitting) and dropping out essential information is decreasing the performance dramatically" correct="true">
 
 Correct!
 
 </opt>
 
-<opt text="Model 2 performs best because the learning curve is smoother">
+<opt text="In the example, model 2 performs worst because the training process is very unsmooth">
 
 This is not the correct answer
 
 </opt>
 
-<opt text="Model 1 is performing worst as it does not use dropout and batch normalization">
+<opt text="In the example, model 1 is performing worst as it does not use dropout and batch normalization">
 
 This is not the correct answer
 
 </opt>
 </choice>
-Set the epochs to 5.
-Change the batch size on model 1 from 8 to 1. In a second run from 1 to 20000.
+
+Set the epochs to 5. Change the batch size on model 1 from 8 to 1. In a second run from 1 to 20000.
 Watch the accuracy and time per epoch the network needs
 
 <choice id=2>
@@ -86,7 +87,7 @@ Good job!
 
 </opt>
 
-<opt text="The network trains fastest with batch normalization">
+<opt text="The training time per epoch is reduced by batch normalization because the network has less parameters to train">
 
 This is not the correct answer
 

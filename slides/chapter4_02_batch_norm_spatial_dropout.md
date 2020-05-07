@@ -7,18 +7,17 @@ type: slides
 ---
 
 # Batch Norm
- Goal: Stable training, high learning rate
-
-Reasons why BatchNorm works are highly discussed:
-    1. Reduces internal covariate shift (2015-2018)
-    2. Reduces wrong scaling of the activation outputs
+Goal: Stable training, high learning rate <br>
+Reasons why BatchNorm works are highly discussed: <br>
+    1. Reduces internal covariate shift (2015-2018) <br>
+    2. Reduces wrong scaling of the activation outputs <br>
 
 <img src="vl3/batch_norm.png">
 
 Source: (Ioffe & Szegedy, 2015)
 
 
-Notes: Batch normalization is a technique to make the training process of the network more stable. Since the development in 2015, it is implemented in many models, not only CNN's but all types of networks. While the mechanism of batch norm is easy to explain, the reason why it works is highly discussed in research. Each batch is normalized to a mean of 0 and a variance of 1 (Ioffe & Szegedy, 2015).
+Notes: Batch normalization is a technique to make the training process of the network more stable. Since the development in 2015, it is implemented in many models, not only CNN's but all types of networks. While the mechanism of batch norm is easy to explain, the reason why it works is highly discussed in research. Each batch is normalized to a mean of beta and a variance of gamma , which could be 0 and 1 (Ioffe & Szegedy, 2015).
 
 The two learned parameters, gamma and beta restore the representation power. Gamma is the scaling parameter x, while beta is the interpect to shift the distribution.
 
@@ -43,22 +42,22 @@ Source: Deeplearning.ai (2017)
 # A simple convolutional neural network in Tensorflow.keras using Batch Normalization
 
 ```python
-def neural_network_2():
-    input_ = layers.Input(shape=(32,32,3)) # Define the input size of the image
-    cnn = layers.Conv2D(16, (3,3), activation="relu") (input_) # first conv layer with 16 filters, by a 3 by 3 kernel size, stride 2, acitvation relu
-    cnn = layers.BatchNormalization() (cnn)
-    cnn = layers.MaxPooling2D() (cnn) # max pooling layer to reduce dimensions, size 2 by 2 (keras default)
+def neural_network_batch_norm():
+    input_ = layers.Input(shape=(32,32,3))
+    cnn = layers.Conv2D(16, (3,3), activation="relu") (input_)
+    cnn = layers.BatchNormalization() (cnn) # Batch Normalization Layer
+    cnn = layers.MaxPooling2D() (cnn)
     
     cnn = layers.Conv2D(32, (3,3), activation="relu") (cnn)
     cnn = layers.BatchNormalization() (cnn) # Batch Normalization layer
-    cnn = layers.MaxPooling2D() (cnn) # max pooling layer to reduce dimensions, size 2 by 2 (keras default)
+    cnn = layers.MaxPooling2D() (cnn)
     
-    flatten = layers.Flatten() (cnn) # flatten to connect the second convolutional layer to the fully connected layers
+    flatten = layers.Flatten() (cnn)
     
     dense = layers.Dense(32, activation="relu") (flatten)
     dense = layers.Dense(16,  activation="relu") (dense)
     
-    output = layers.Dense(10, activation="softmax") (dense) # output; 10 different classes
+    output = layers.Dense(10, activation="softmax") (dense)
     
     opt = optimizers.Adam()
     
@@ -69,6 +68,8 @@ def neural_network_2():
     
     return m
 ```
+
+Note: No hyperparameters are necessary for batch normalization, as gamma and beta are learned by backpropagation.
 
 ---
 # Spatial dropout
@@ -85,23 +86,23 @@ Works very well when having a strong correlation between neurons
 Source: Tompson et al. (2015), Brownlee, (2018).
 
 
-Note: Between convolutional layers, spatial dropouts should be used for dropping filters
+Note: Between convolutional layers, spatial dropouts should be used for dropping filters. The normal dropout would drop out values out of the filters, but not an complete filter. Thus, spatial dropouts works very well when there is a strong correlation between the filters. 
 
 ---
 
 # A simple convolutional neural network in Tensorflow.keras using SpatialDropout
 
 ```python
-def neural_network_2():
-    input_ = layers.Input(shape=(32,32,3)) # Define the input size of the image
-    cnn = layers.Conv2D(16, (3,3), activation="relu") (input_) # first conv layer with 16 filters, by a 3 by 3 kernel size, stride 2, acitvation relu
+def neural_network_spatial():
+    input_ = layers.Input(shape=(32,32,3))
+    cnn = layers.Conv2D(16, (3,3), activation="relu") (input_)
     cnn = layers.SpatialDropout2D(0.2) # Spatial dropout with dropping rate of 20%
-    cnn = layers.MaxPooling2D() (cnn) # max pooling layer to reduce dimensions, size 2 by 2 (keras default)
+    cnn = layers.MaxPooling2D() (cnn) 
     
     cnn = layers.Conv2D(32, (3,3), activation="relu") (cnn)
-    cnn = layers.MaxPooling2D() (cnn) # max pooling layer to reduce dimensions, size 2 by 2 (keras default)
+    cnn = layers.MaxPooling2D() (cnn) 
     
-    flatten = layers.Flatten() (cnn) # flatten to connect the second convolutional layer to the fully connected layers
+    flatten = layers.Flatten() (cnn)
     
     dense = layers.Dense(32, activation="relu") (flatten)
     dense = layers.Dense(16,  activation="relu") (dense)
@@ -117,6 +118,8 @@ def neural_network_2():
     
     return m
 ```
+
+Note: In the spatial dropout layer, only the dropout rate needs to be specified (similar to the normal dropout).
 
 ---
 

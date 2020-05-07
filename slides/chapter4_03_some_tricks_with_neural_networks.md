@@ -19,7 +19,7 @@ Source: Brownlee (2019)
 
 Note: Often, when the different variables in the input are on different scales, for example, dummy variables being between 0 and 1 and numeric variables on different ranges up to infinite, weight updates in the network can get very large due to the large units of the variables. When weight updates get very large, often the learning process gets instable as with the next batch or epoch, a lot of other weights need to be adjusted according to the last large update. This is also tightly linked to the performance of learning. With normalized inputs, the optimizer converges faster, reducing training time.
 
-More information you can hind <a href="https://machinelearningmastery.com/how-to-improve-neural-network-stability-and-modeling-performance-with-data-scaling/"> here </a>
+More information you can found <a href="https://machinelearningmastery.com/how-to-improve-neural-network-stability-and-modeling-performance-with-data-scaling/"> here </a>
 
 ---
 
@@ -61,13 +61,14 @@ def transform_function(filename, label):
 ```
 
 
-Note: It is not convenient to read first all the data into memory, preprocess it, and use it than for training. First of all, this often requires large machines with large RAM. Secondly, not the full power of the GPU can be used, as the GPU might wait for the batch to be prepared or passed to the GPU.
+Note: It is not convenient to read first all the data into memory, preprocess it, and use it than for training. First of all, this often requires large machines with large RAM. Secondly, if loading just one batch at the time, not the full power of the GPU can be used, as the GPU might wait for the batch to be prepared or passed to the GPU.
 
 Using tensorflow pipelines mitigate these two downsides. In the example above, a sample pipeline is built. The dataset object can be normally passed to the fit function of the model.
 
 For more information about data piplines see <a href="https://www.tensorflow.org/guide/data_performance">here</a>, <a href="https://towardsdatascience.com/building-efficient-data-pipelines-using-tensorflow-8f647f03b4ce">here</a> and <a href="https://cs230.stanford.edu/blog/datapipeline/"> here </a>.
 
-It is highly useful to have a good knowledge of tensorflow data pipelines.
+It is highly useful to have a good knowledge of tensorflow data pipelines. 
+In the example above, images are read, resized and normalized per batch.
 
 ---
 
@@ -93,6 +94,8 @@ dataset = dataset.prefetch(1) # prepare 1 element (batch) in advance
 # The loading process will start when the dataset is passed to the model.fit() 
 # method or by the enumerate command.
 ```
+
+Note: In the ".map"-part, the previous written transformation function is applied to the data. This process is executed with 4 parallel sub-processes for each batch. With prefetching a number of batches, in this example 1, the network is trained efficiently, as while the GPU is training on a batch, the next batch is already prepared.
 
 ---
 
@@ -132,8 +135,6 @@ Source: Becker (2018)
 Note: There is a debate going on if pooling should be replaced by strides. 
 Many networks are using pooling - this is more the "historic way".
 New network architecture (we will discuss them next week) are replacing these with strides
-
-
 
 ---
 

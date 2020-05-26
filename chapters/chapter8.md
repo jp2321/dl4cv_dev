@@ -47,6 +47,6 @@ a) Select a dataset on your own. Train a Neural Network to perform the classifac
 b) Transform the test set and create adversarial examples - evaluate the performance in comparison to the original test set. 
 
 c) Retrain the network, now with original images and adversarial images (generated from the test set)
-Is the changing now the performance on the adversarial test set?
+Is the performance changing on the adversarial test set?
 
 </exercise>

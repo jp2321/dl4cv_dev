@@ -27,10 +27,10 @@ def FCN_16():
     conv_5 = layers.MaxPooling2D((2,2)) (conv_5)
     
     
-    # Decoder
+    
     conv_5 = layers.Conv2D(_________,_________, activation="relu", padding="same") (conv_5)
     
-    
+    # Decoder
     pred = layers.Conv2D(num_classes,1, activation="relu", padding="same") (conv_5)
     pred = layers.UpSampling2D(_______) (pred)
 

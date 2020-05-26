@@ -68,13 +68,13 @@ Note: In the figure on the slide, an example is shown that the original image wi
 An adversarial attack is the usage of adversarial examples on an existing neural network <br><br>
 There are different scales on which adversarial attacks are rated: <br>
 
-- False-positive: Aim to generate Typ 1 errors
+- False-positive: Aim to generate type 1 errors
     
     Generate negative example to be misclassified as a positive one
     
     Images unrecognizable to a human (noise) classified with a high confidence into a certain class 
 
-- False-negative: Aim to generate Typ 2 errors 
+- False-negative: Aim to generate type 2 errors 
 
     Generate positive sample to be misclassified as a negative one
 

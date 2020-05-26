@@ -4,7 +4,7 @@ type: slides
 
 # Semantic Segmentation
 
-Note: There are several different segmentation task. In the course, we will focus on semantic segmentation. Semantic segmentation is the classification of each pixel belonging to a certain class or the background. Instance segmentation,  another form of segmentation is the classification of pixels belonging to an "instance" which is the combination of object detection and predicting to which object instance this pixel belongs.
+Note: There are several different segmentation tasks. In the course, we will focus on semantic segmentation. Semantic segmentation is the classification of each pixel belonging to a certain class or the background. Instance segmentation,  another form of segmentation is the classification of pixels belonging to an "instance" which is the combination of object detection and predicting to which object instance this pixel belongs.
 
 ---
 
@@ -17,13 +17,35 @@ For n different classes to segment, the label as n different channels, each indi
 
 ---
 
+# Encoder-decoder network
+
+<img src="vl6/ConvDeconv.png" width="70%">
+
+Source: Sarafianos, 2016
+
+Note: Here, the structure of the encoder-decoder network can be seen very well. The encoder, a classical CNN, encodes the information from the original image in another representation. Often, the encoded part is much smaller due to the pooling-layers. However, it contains detailed information on the image features (objects, parts). The information was transformed from 3 channels (RGB) to maybe 2048 channels belonging to abstract things. Nevertheless, as the encoded part is much smaller, the spatial representation is very rough compared to the original input. 
+ 
+
+The decoder uses the encoded information and tries to reproduce the output. In an auto encoder-decoder case, it would try to reproduce the input image itself from the encoded information. One can think about this as a type of compression like mp3 for images, where the image is represented in a very dense format. In the case of semantic segmentation, not the input image is reconstructed, but information about the different semantic parts of the image.
+
+
+---
+
+# Encoder-decoder network II
+
+<iframe width="750" height="450" src="https://www.youtube.com/embed/1icvxbAoPWc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Source: Pound (2018)
+
+---
+
 # Network structure for segmentation - FCNs
 
 - by Long, Shelhamer & Darrell, 2015
 - first suggestion of a fully connected network
 - No dense layers in the network 
 - Encoder: Classical CNN e.g. VGG
-- Decoder: 1 by 1 Convolutions + Upsampling
+- Decoder: 1 by 1 Convolutions for classification of pixels + Upsampling
 - Different versions: FCN-32, FCN-16, FCN-8
 - Named after the number of upsampling steps in the last layer
 
@@ -31,7 +53,7 @@ For n different classes to segment, the label as n different channels, each indi
 
 Source:  Long, Shelhamer & Darrell, 2015
 
-Note: The first algorithm applied for segmentation is thus called "fully convolutional network" and was published in 2015. The encoder is a normal CNN e.g. VGG. The decoder has 1 by 1 convolutions plus an upsampling layer. Different versions of the FCN exist, with some connecting layers of the encoder and decoder. In the original paper, a deconvolutional layer is used for the upsampling. However, we used here normal upsampling layer with bilinear interpolation. This technique can upsample the input by just duplicating the rows and columns (Long, Shelhamer & Darrell, 2015). 
+Note: The first algorithm applied for segmentation is thus called "fully convolutional network" and was published in 2015. The encoder is a normal CNN e.g. VGG. The decoder has 1 by 1 convolutions for predicting for each pixel the class label plus an upsampling layer to scale the prediction to the original size of the image. Different versions of the FCN exist, with some connecting layers between the encoder and decoder. In the original paper, a deconvolutional layer is used for the upsampling. However, we used here normal upsampling layer with bilinear interpolation. This technique can upsample the input by just duplicating the rows and columns (Long, Shelhamer & Darrell, 2015). 
 
 
 ---
@@ -39,9 +61,10 @@ Note: The first algorithm applied for segmentation is thus called "fully convolu
 # FCN-8
 
 <img src="vl6/fcn_8.png" width="50%">
+<br>
 Image Source:  https://www.researchgate.net/figure/Fully-convolutional-neural-network-architecture-FCN-8_fig1_327521314
 
-Note: Here, we see a FCN-8 example. For FCN-8 and FCN-16 skip-connection as in the ResNet are used to transfer some of the original representation into the decoder part of the network. Notice here, that in FCN-8 the main path is first upsampled two times. Afterward,  the prediction of the first branch is added. The result is again upsampled two times, and the other branch is added to the result. Finally, the classification is performed, and the image is upsampled again, now by 8 times, to match the input dimensions.
+Note: Here, we see a FCN-8 example. For FCN-8 and FCN-16 skip-connection as in the ResNet are used to transfer some of the original representation (detailed spatial information) into the decoder part of the network. Notice here, that in FCN-8 the main path is first upsampled two times. Afterward,  the prediction of the first branch is added. The result is again upsampled two times, and the other branch is added to the result. Finally, the classification is performed, and the image is upsampled again, now by 8 times, to match the input dimensions.
 
 ---
 
@@ -62,6 +85,7 @@ Source: Adams (2019a)
 - Performs upsampling by deconvolution
 
 <img src="vl6/u-net-architecture.png" width=500 height=500>
+
 Source: Ronneberger, Fischer & Brox, 2015
 
 Note: For the other often-used network, the U-Net, used in medicine, so-called deconvolutions are used. It is called U-Net because it looks like a U. The main characteristic is that some layers outputs from the encoder are copied and concatenated with layers in the encoder. 
@@ -129,11 +153,13 @@ Note: For a more realistic evaluation, IoU is used. This concept is known from o
             https://www.jeremyjordan.me/evaluating-image-segmentation-models/ </li>
         <li>Long, J., Shelhamer, E., & Darrell, T. (2015). Fully convolutional networks for semantic segmentation. 
             In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 3431-3440).</li>
+        <li>Pound, M. (2018). Encoder Decoder Network. Retrieved from: https://www.youtube.com/watch?v=1icvxbAoPWc</li>
         <li>Raschka, S., & Mirjalili, V. (2019). Python Machine Learning: Machine Learning and Deep Learning with 
             Python, scikit-learn, and TensorFlow 2. Packt Publishing Ltd.</li>
         <li>Ronneberger, O., Fischer, P., & Brox, T. (2015, October). U-net: Convolutional networks for biomedical 
             image segmentation. In International Conference on Medical image computing and computer-assisted 
             intervention (pp. 234-241). Springer, Cham.</li>
+        <li>Sarafianos, N. (2016). ICIP 2016: Deep Learning Trends and Open Problems. Retrieved from: https://nsarafianos.github.io/icip16 </li>
         <li> Tiu, E. (2019). Metrics to evaluate your semantic segmentation model. Retrieved from: 
                 https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2 
         </li>

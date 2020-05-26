@@ -29,4 +29,4 @@ Note: Instead of just using the transfer model up to the global pooling or flatt
 
 ---
 
-# ""
+# Keep coding!

@@ -73,5 +73,6 @@ This is not the correct answer.
 </exercise>
 
 <exercise id="47" title="Playing with the code - Object Detection">
-	
+	Use the given Jupyter notebook for object detection. Understand the existing function for data preprocessing and training.
+	Try to improve the improve the existing object detection algorithm in the notebook. 
 </exercise>

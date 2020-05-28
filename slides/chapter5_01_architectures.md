@@ -145,6 +145,8 @@ Note: The inception architecture was introduced in 2015 by Szegedy, Ioffe, Vanho
 
 There are multiple versions of Inception, improving the architecture over time, introducing in v2 the idea of stacked convolutions (similar to VGG), in v3 factorized convolutions to speed up computation and in v4 residual blocks (similar to ResNet) (Szegedy, Ioffe, Vanhoucke, Alemi, 2015, Vasilev, 2019). Factorized convolutions are increasing efficiency. Instead of an NxN convolution first an Nx1 and afterward a 1xN convolutional operation is performed.
 
+The Inception model is a combination of many inception moduls. A complete overview of the model can be gathered in the original <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/viewPaper/14806">paper</a>.
+
 ---
 
 # Inception Video description (1)

@@ -4,7 +4,7 @@ type: slides
 
 # Object detection
 
-Note: Instead of classifying the image into a category, often a more fine-granular view is needed for advanced business tasks. Therefore, information about which objects are in the image and where they are, are from interest. Especially in autonomous driving or tasks which include a robot, this information is necessary to "run" these machines. For autonomous driving, for example, it is necessary not only to detect if a stop sign is in the image to detect every stop sign and to understand where they are.
+Note: Instead of classifying the image into a category, often a more fine-granular view is needed for advanced business tasks. Therefore, information about which objects are in the image and where they are, are of interest. Especially in autonomous driving or tasks which include a robot, this information is necessary to "run" these machines. For autonomous driving, for example, it is necessary not only to detect if a stop sign is in the image, but to detect every stop sign and to understand where they are.
 
 ---
 
@@ -14,7 +14,7 @@ Note: Instead of classifying the image into a category, often a more fine-granul
 
 Note: This example shows a simplified version of an object detection task, where just one object in the image exists. To perform the object localization, the bounding box area needs to be predicted plus a classification of the object itself. 
 
-Sometimes the bounding box is framed (as this example) as the coordinates of two corners, where x1,y1 is the coordinate of edge, x2,y2 the coordinate of a diagonal edge. The height of the bounding box is y1-y2, and the width is x1-x2. Sometimes the dataset labels contain these measures. In other examples, as listed in theory on the next slide, the coordinates are annotated with b1 to b4. b1,b2 are x1,y1, and are one corner of the bounding box. b3 is the height of the bounding box, and b4 annotates the width of the bounding box.
+Sometimes the bounding box is framed (as this example) as the coordinates of two corners, where x1,y1 is the coordinate of edge, x2,y2 the coordinate of a diagonal edge. The height of the bounding box is y1-y2, and the width is x1-x2. Sometimes the dataset labels contain these measures. In other examples, as listed in theory on the next slide, the coordinates are annotated with b1 to b4. b1,b2 are equal to x1,y1, and are one corner of the bounding box. b3 is the height of the bounding box, and b4 annotates the width of the bounding box.
 
 ---
 
@@ -46,6 +46,8 @@ Note: For object detection, it is not sufficient to output just the one-hot enco
 Downside: A lot of regions would need to be passed to the network if a lot of objects are in the image. This is very inefficient in terms of computation.
 
 Source: Vasilev, 2019
+
+Note: In a naive approach, the image would be cut into regions. Each region would be passed to a CNN to classify the whole region. The coordinates of the bounding box are the coordinates of the region. While this approach is very easy to implement, it has the downside, that a lot of regions may be passed through the CNN, being slow and inefficient in computation.
 
 ---
 
@@ -79,6 +81,7 @@ Note: In general, two different model architectures exist for object detection, 
 
 <img src="vl5/rcnn.png" width="35%">
 
+Image source: Ghandi, 2018 <br>
 Source: Vasilev, 2019
 
 Note: R-CNN was the first well-performing object detection method. Via selective search, interesting regions in the image are identified. Often 2000 different regions are sampled per image. Each of the 2000 different images are passed through a CNN for object classification. The bounding box does not need to be calculated as the image part sets the bounding box itself. While this method is easy to implement, it comes with the downside of many predictions per image. Thus, it is relatively slow, 45 seconds per image, and no real-time application is possible, for example, autonomous driving (Vasilev, 2019).
@@ -93,7 +96,7 @@ Note: R-CNN was the first well-performing object detection method. Via selective
 
 <img src="vl5/fast_rcnn.png" width="50%">
 
-Image source: Ghandi, 2018
+Image source: Ghandi, 2018 <br>
 Source: Vasilev, 2019
 
 Note: Thus, R-CNN was improved, and Fast R-CNN was developed. While the overall idea stays the same, the whole image is first passed through and CNN. The convoluted activations are derived, and selective search is applied to the convoluted images. Thus, one pass through the CNN is needed. A special ROI pooling is performed to save the area of interest, and fully connected layers perform the classification of the object as well as the bounding box prediction (Vasilev, 2019).
@@ -107,7 +110,8 @@ Note: Thus, R-CNN was improved, and Fast R-CNN was developed. While the overall 
 - Proposals are classification and regression
 
 <img src="vl5/faster_rcnn.png" width="30%">
-Image source: Ghandi, 2018
+
+Image source: Ghandi, 2018 <br>
 Source: Vasilev, 2019
 
 Note: While Fast R-CNN is faster than R-CNN, it might not be fast enough, so Faster R-CNN comes into play. Compared to Fast R-CNN, instead of using selective search, a regional proposal network is trained for suggesting intelligently areas of interest. The Regional Proposal Network is a separately trained CNN for just predicting interesting regions in images (Vasilev, 2019).
@@ -123,9 +127,10 @@ Note: While Fast R-CNN is faster than R-CNN, it might not be fast enough, so Fas
 - Fastest detection algorithm: less than 1 second per image
 
 <img src="vl5/yolo.png" width="50%">
+
 Image source: Ghandi, 2018
 
-Note: Yolo is up to now the fastest method for object detection. As it is built on just one neural network, different assumptions need to be made. First, the image is divided into an S by S grid. In each grid, m objects can be found. On each grid, the CNN is applied with the output of m times the 5+n output vector. The Anchorboxes are in a 1 to m relationship so that each object belongs to one anchor box (which can be spread over multiple grids). However, each grid m objects. It is with less than 1 second per image the fasted object detection methods (Vasilev, 2019).
+Note: Yolo is up to now the fastest method for object detection. As it is built on just one neural network, different assumptions need to be made. First, the image is divided into an S by S grid. In each grid, m objects can be found. On each grid, the CNN is applied with the output of m times the 5+n output vector. The Anchorboxes are in a 1 to m relationship so that each object belongs to one anchor box (which can be spread over multiple grids). However, each grid has maximum of m objects. It is with less than 1 second per image the fasted object detection methods (Vasilev, 2019).
 
 ---
 
@@ -177,6 +182,8 @@ Source: Deeplearning.ai (2017c)
 ---
 
 # Advice
+
+- Use one of the pre-implemented models of R-CNN, Fast/Faster R-CNN or Yolo for the project
 
 Note: While we will have a closer look at how object detection works on a simple case with just one object per image, it is worthwhile to use one of the various implementations of R-CNN, Fast/Faster R-CNN, Yolo etc. already written for Keras and Tensorflow.
 

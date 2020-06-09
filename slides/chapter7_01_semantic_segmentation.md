@@ -90,7 +90,15 @@ Source: Ronneberger, Fischer & Brox, 2015
 
 Note: For the other often-used network, the U-Net, used in medicine, so-called deconvolutions are used. It is called U-Net because it looks like a U. The main characteristic is that some layers outputs from the encoder are copied and concatenated with layers in the encoder. 
 
-Deconvolution, also known as transposed convolution or subpixel convolution, can transform the input through applying a kernel so that the output has larger dimensions than the original input. The best and most intuitive way of thinking of a deconvolution is depicted above. In this case, a single input value is multiplied by a kernel, the black square box with dimensions 3 by 3 to build a new output of 3 by 3. With strides 1, the blue input of 4 by 4 is transformed to an 6 by 6 output (Ronneberger, Fischer & Brox, 2015, Dumoulin & Visin, 2016). 
+---
+
+# Deconvolution
+
+<img src="vl6/deconv.gif" width=500 height=500>
+
+Source: Pröve (2017)
+
+Note: Deconvolution, also known as transposed convolution or subpixel convolution, can transform the input through applying a kernel so that the output has larger dimensions than the original input. The best and most intuitive way of thinking of a deconvolution is depicted above. In this case, a single input value is multiplied by a kernel, the black square box with dimensions 3 by 3 to build a new output of 3 by 3. With strides 1, the blue input of 4 by 4 is transformed to an 6 by 6 output (Ronneberger, Fischer & Brox, 2015, Dumoulin & Visin, 2016). 
 
 More details for deconvolutions can be found <a href="https://arxiv.org/abs/1603.07285">here</a>
 
@@ -154,6 +162,7 @@ Note: For a more realistic evaluation, IoU is used. This concept is known from o
         <li>Long, J., Shelhamer, E., & Darrell, T. (2015). Fully convolutional networks for semantic segmentation. 
             In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 3431-3440).</li>
         <li>Pound, M. (2018). Encoder Decoder Network. Retrieved from: https://www.youtube.com/watch?v=1icvxbAoPWc</li>
+        <li>Pröve, P. (2017). An Introduction to different types of convolutions in deep learning: Retrieved from: https://towardsdatascience.com/types-of-convolutions-in-deep-learning-717013397f4d
         <li>Raschka, S., & Mirjalili, V. (2019). Python Machine Learning: Machine Learning and Deep Learning with 
             Python, scikit-learn, and TensorFlow 2. Packt Publishing Ltd.</li>
         <li>Ronneberger, O., Fischer, P., & Brox, T. (2015, October). U-net: Convolutional networks for biomedical 

@@ -288,12 +288,6 @@ Source: Tensorflow (2020)
 
 Note: This code snippet is from Tensorflow and shows how the fast signs are calculated. Therefore, first, the image is converted from a numpy array to a tensor format. The gradient tape operation records the gradients of functions. The loss is calculated by applying the loss function with the original label and the prediction as inputs. The derivative of the loss (gradients) are calculated with respect to the input image. Afterwards, the sign of the gradients are extracted. To apply the perturbations, the signs are multiplied by epsilon, a very small number to create the pixel change values. Afterward, they are added to the original image.
 
----
-
-# Your task
-
-Take your own dataset, create your own model. Train the model up to a good performance. Create adversarial examples from the test set and test the performance.
-In a second step, create adversarial examples additional to the original examples. Retrain the network with both and test the performance on the test adversarial set
 
 ---
 <html>

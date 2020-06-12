@@ -96,7 +96,7 @@ Note: For the other often-used network, the U-Net, used in medicine, so-called d
 
 <img src="vl6/deconv.gif" width=500 height=500>
 
-Source: Pröve (2017)
+Source: Lane (2017)
 
 Note: Deconvolution, also known as transposed convolution or subpixel convolution, can transform the input through applying a kernel so that the output has larger dimensions than the original input. The best and most intuitive way of thinking of a deconvolution is depicted above. In this case, a single input value is multiplied by a kernel, the black square box with dimensions 3 by 3 to build a new output of 3 by 3. With strides 1, the blue input of 4 by 4 is transformed to an 6 by 6 output (Ronneberger, Fischer & Brox, 2015, Dumoulin & Visin, 2016). 
 
@@ -133,7 +133,13 @@ Percentage of pixel classified correctly in the image.
 
 Image source: (Tiu, 2019)
 
-Note: For evaluating the performance of image segmentation models, there are multiple possibilities. Two of them are pixel-wise accuracy and IoU. While pixel-wise accuracy is easy to understand as it is the mean accuracy of the predicted pixels per class, the major disadvantage of this evaluation method is that the scores are effected by class imbalances. In the segmenting example above, 95% of the pixel does not belong to the ship class. Thus, an accuracy of 95% in the ship class would mean that actually, no ship is segmented.
+Note: For evaluating the performance of image segmentation models, there are multiple possibilities. Two of them are pixel-wise accuracy and IoU. While pixel-wise accuracy is easy to understand as it is the mean accuracy of the predicted pixels per class, the major disadvantage of this evaluation method is that the scores are effected by class imbalances. In the segmenting example above, 5% of the pixels are showing a ship (colored blocks). The other 95% of the pixel does not belong to the ship class. Thus, an accuracy of 95% in the ship class would mean that actually, no ship is segmented as this is the baseline performance when predicting that there are no ships at all (and  all pixels are predicted to be background). 
+
+A prediction would than look like this
+
+<img src="vl6/accuracy_2.png" width=200 height=200>
+
+
 
 ---
 
@@ -159,6 +165,7 @@ Note: For a more realistic evaluation, IoU is used. This concept is known from o
             arXiv:1603.07285.</li>
         <li> Jorden, J. (2018). Evaluating image segmentation models. Retrieved from: 
             https://www.jeremyjordan.me/evaluating-image-segmentation-models/ </li>
+        <li> Lane, T. (2018). Transposed convolutions with MS Excel. Retrieved from: https://medium.com/apache-mxnet/transposed-convolutions-explained-with-ms-excel-52d13030c7e8 </li>
         <li>Long, J., Shelhamer, E., & Darrell, T. (2015). Fully convolutional networks for semantic segmentation. 
             In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 3431-3440).</li>
         <li>Pound, M. (2018). Encoder Decoder Network. Retrieved from: https://www.youtube.com/watch?v=1icvxbAoPWc</li>

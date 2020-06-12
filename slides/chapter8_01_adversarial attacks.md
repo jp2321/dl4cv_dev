@@ -59,7 +59,7 @@ Note: The adversarial attack is a minimization problem, where the difference bet
 
 Source: Goodfellow, Shlens, Szegedy (2014)
 
-Note: In the figure on the slide, an example is shown that the original image with some noise will end up with a perturbed image, which is not distinguishable from the original one. The algorithm will, however, classify it wrongly. 
+Note: In the figure on the slide, an example is shown that the original image with some noise will end up with a perturbed image, which is not distinguishable from the original one. However, the algorithm will classify it wrongly. 
 
 ---
 

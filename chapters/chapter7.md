@@ -54,13 +54,13 @@ Perfect!
 	Run the given notebook about image segmentation.
 <choice id="1">
 
-<opt text="FCN-16 performs better than FCN-32 in the mean accuracy metric">
+<opt text="FCN-16 performs 3% points better than FCN-32 in the mean accuracy metric">
 
 This is not the correct answer.
 
 </opt>
 
-<opt text="FCN-16 performs best in IoU">
+<opt text="Segmentations performed by FCN-32 look very clear and have almost no difference to the true label">
 
 This is not the correct answer.
 
@@ -72,29 +72,6 @@ Perfect!
 
 </opt>
 </choice>
-
-Change now the epochs of the U-Net to 50. What happens to the performance
-
-<choice id="2">
-
-<opt text="The U-Net performance breaks down due to overfitting" correct=True>
-
-Perfect!
-
-</opt>
-
-<opt text="The U-Net performance increases to an IoU of 0.85 in class 1">
-
-This is not the correct answer!
-
-</opt>
-
-<opt text="The performance stays the same">
-	This is not the correct answer!
-</opt>
-
-</choice>
-
 </exercise>
 
 <exercise id="52" title="Playing with the code - Image Segmentation">

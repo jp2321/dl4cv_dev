@@ -183,7 +183,10 @@ Note: Lastly, attacks can be distinguished on how the perturbations are calculat
 
 <img src="vl7/pertubation.png">
 
-Note: The strength of the perturbations can be measured with different measurements. The l0 norms counts the total number of pixel changed; the l2 norm calculates the difference between the original image and the adversarial example and the lmax norm rates the perturbations on the maxium change of all pixels.
+Note: The strength of the perturbations can be measured with different measurements. Often the p-norm is used, which is a specific type of norming a vector. Prominent examples of the p-norm are p=1, being the sum of the vector, p=2, the euclidean distance. 
+
+For the pertubation examples:
+The l0 norms counts the total number of pixel changed; the l2 norm calculates the difference between the original image and the adversarial example and the lmax norm rates the perturbations on the maxium change of all pixels.
 
 ---
 

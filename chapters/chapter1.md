@@ -8,7 +8,7 @@ type: chapter
 id: 1
 ---
 
-<exercise id="1" title="Introduction to computer vision" type="slides">
+<exercise id="1" title="Introduction to computer vision " type="slides">
 
 <slides source="chapter1_01_introduction">
 </slides>

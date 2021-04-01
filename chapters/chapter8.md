@@ -42,11 +42,11 @@ Perfect!
 
 <exercise id="55" title="Playing with the code - Adversarial attacks">
 
-a) Select a dataset on your own. Train a Neural Network to perform the classifaction.
+a) Select a dataset on your own. Train a Neural Network to perform classification.
 
 b) Transform the test set and create adversarial examples - evaluate the performance in comparison to the original test set. 
 
-c) Retrain the network, now with original images and adversarial images (generated from the test set)
+c) Retrain the network, now with original images and adversarial images (generated from the test set). <br>
 Is the performance changing on the adversarial test set?
 
 </exercise>

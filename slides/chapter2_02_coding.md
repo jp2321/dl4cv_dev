@@ -38,7 +38,7 @@ plt.imshow(img) # show the image
 ```
 <img src="vl1/burger_bgr.jpeg" alt="This image is in /static" width="30%">
 
-Note: Here it can be seen that cv2 uses the BGR format, which would lead to wrong color schemas when it is visualized.
+Note: Here it can be seen that cv2 uses the BGR format, which would lead to wrong color schemes when it is visualized.
 
 ---
 
@@ -55,7 +55,7 @@ plt.imshow(cv2.cvtColor(np.array(img, dtype=np.uint8), cv2.COLOR_BGR2RGB)) # sho
 ```
 <img src="vl1/burger_rgb.jpeg" alt="This image is in /static" width="30%">
 
-Note: With the cv2 cvtColor command, the image color can be changed; Here, the option BGR2RGB is used. The image is transformed moreover to an unsigned integer 8 format, which has the value range between 0 and 255.
+Note: With the cv2 cvtColor command, the image color can be changed; Here, the option BGR2RGB is used. The image is also transformed to an unsigned integer 8 format, which has the value range between 0 and 255.
 
 ---
 

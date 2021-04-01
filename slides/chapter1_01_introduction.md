@@ -36,7 +36,7 @@ source = https://github.com/apache/incubator-mxnet/tree/master/example/image-cla
 
 <img src="vl1/object_detection.jpg" alt="This image is in /static" width="90%">
 
-Notes: In object detection, the aim is to find different objects in an image. It is typically used in autonomous driving to detect other cars, pedestrians, or cyclists. Therefore, not only the class of the object but also the regions where it was detected is from interest. Consequently, also a bounding box around the object needs to be predicted with the corresponding object class.
+Notes: In object detection, the aim is to find different objects in an image. It is typically used in autonomous driving to detect other cars, pedestrians, or cyclists. Therefore not only the class of the object, but also the regions where it was detected is from interest. Consequently, a bounding box around the object with the corresponding object class needs to be predicted.
 
 source = https://paperswithcode.com/task/real-time-object-detection
 

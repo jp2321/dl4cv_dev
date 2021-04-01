@@ -39,7 +39,7 @@ Source: https://www.youtube.com/watch?v=Exd6CLAYOh0
 
 # Definition of adversarial attacks 
 
-Example (image) for which a false prediction is made by a machine learning algorithms with just little perturbations of the original example
+Example (image) for which a false prediction is made by a machine learning algorithm with just little perturbations of the original example
 
 The example fools the machine learning with differences that are not visible for the human eye.
 
@@ -99,7 +99,7 @@ An attack can be rated on the falsification strategy, whether the networks make 
     The adversary knows all information about the network, has access to the parameters, number of layers, weights etc.
 - Black Box
 
-    Adversary as no access to the network
+    Adversary has no access to the network
 
     This attack is mostly used against online services.
 
@@ -136,13 +136,13 @@ Multiple updates of the adversarial examples
 
 Source: Yuan et al. (2018)
 
-Note: While non-targeted attacks have the aim that the adversarial example is misclassified, targeted attacks aim for misclassification with a specific target (class).
+Note: In a one-time attack, only one round of optimization of the adversarial example is performed, while for iterative attacks, multiple rounds of updates occur.
 
 ---
 
 # Types of adversarial attacks V
 
-### Pertubation Scope
+### Perturbation Scope
 - Individual
 
 For each example in the dataset, the individual perturbations are calculated
@@ -157,27 +157,27 @@ Note: Most of the attacks are individual attacks, so that for each example in th
 
 # Types of adversarial attacks VI
 
-### Pertubation Limitation
+### Perturbation Limitation
 
 - Optimized Perturbation
 
 Perturbations are the goal of the minimization problem.
 
-- Constraint Pertubation
+- Constraint Perturbation
 
 Are the constraint of the minimization problem
 
 
 Source: Yuan et al. (2018)
 
-Note: Lastly, attacks can be distinguished on how the perturbations are calculated. Either they are part of the optimization to minimize the perturbations, thus called optimized perturbations. The attack can also be formulated from an constraint focus. Thus the perturbations are not the goal but the constraints in the optimization problem. The "only" have to be good enough to fool the network.
+Note: Lastly, attacks can be distinguished on how the perturbations are calculated. Either they are part of the optimization to minimize the perturbations, thus called optimized perturbations. The attack can also be formulated from a constraint focus. Thus the perturbations are not the goal but the constraints in the optimization problem. They "only" have to be good enough to fool the network.
 
 ---
 
 # Perturbation measures
 
 - ℓ𝑝 is the p-normed distance between the original image and the adversarial example
-- ℓ0 count the number of pixels changed in the adversarial example
+- ℓ0 counts the number of pixels changed in the adversarial example
 - ℓ2 measures the euclidean distance between image and example
 - ℓ∞ maximum change for all pixels
 
@@ -185,8 +185,8 @@ Note: Lastly, attacks can be distinguished on how the perturbations are calculat
 
 Note: The strength of the perturbations can be measured with different measurements. Often the p-norm is used, which is a specific type of norming a vector. Prominent examples of the p-norm are p=1, being the sum of the vector, p=2, the euclidean distance. 
 
-For the pertubation examples:
-The l0 norms counts the total number of pixel changed; the l2 norm calculates the difference between the original image and the adversarial example and the lmax norm rates the perturbations on the maxium change of all pixels.
+For the perturbation examples:
+The l0 norms counts the total number of pixels changed. The l2 norm calculates the difference between the original image and the adversarial example, while the lmax norm rates the perturbations on the maxium change of all pixels.
 
 ---
 
@@ -243,7 +243,7 @@ Source: Yuan et al. (2018)
 
 Source: Yuan et al. (2018)
 
-Note: In adversarial detecting, the image that is classified is validated in a separate network with a binary outcome if this is an adversarial example or the original image. For Input reconstruction, the aim is to reconstruct the image by an autoencoder (encoder-decoder network). 
+Note: In adversarial detection, the goal is to classify images into adversarial example and original image. Therefore, a separate network with a binary outcome is trained on adversarial examples and true images. For input reconstruction, the aim is to reconstruct the image by an autoencoder (encoder-decoder network; trained on true images). By using a anomaly detection style, the reconstruction error for the adversarial examples should be higher compared to the original images. 
 
 ---
 
@@ -255,7 +255,7 @@ Note: In adversarial detecting, the image that is classified is validated in a s
 
 Source: Yuan et al. (2018)
 
-Note: The easiest way is to train or retrain the network with original images and adversarial ones, both with the original label. The hypothesis is that the network gets more robust to adversarial patterns. Classifier robustyfing uses 
+Note: The easiest way is to train or retrain the network with original images and adversarial ones, both with the original label. The hypothesis is that the network gets more robust to adversarial patterns.
 
 ---
 
@@ -281,7 +281,7 @@ def create_adversarial_pattern(input_image, input_label):
     return signed_grad
 
 # Apply the signed gradient to the original image to create adversarial example 
-eps=0.005 # Strength of the pertubation
+eps=0.005 # Strength of the perturbation
 perturbations = create_adversarial_pattern(image, label) # calculate the signed gradient 
 adv_x = image + eps*perturbations # alter the image
 
@@ -289,7 +289,7 @@ adv_x = image + eps*perturbations # alter the image
 
 Source: Tensorflow (2020)
 
-Note: This code snippet is from Tensorflow and shows how the fast signs are calculated. Therefore, first, the image is converted from a numpy array to a tensor format. The gradient tape operation records the gradients of functions. The loss is calculated by applying the loss function with the original label and the prediction as inputs. The derivative of the loss (gradients) are calculated with respect to the input image. Afterwards, the sign of the gradients are extracted. To apply the perturbations, the signs are multiplied by epsilon, a very small number to create the pixel change values. Afterward, they are added to the original image.
+Note: This code snippet is from Tensorflow and shows how the fast signs are calculated. Therefore, first, the image is converted from a numpy array to a tensor format. The gradient tape operation records the gradients of functions. The loss is calculated by applying the loss function with the original label and the prediction as inputs. The derivatives of the loss (gradients) are calculated with respect to the input image. Afterwards, the signs of the gradients are extracted. To apply the perturbations, the signs are multiplied with epsilon, a very small number to create the pixel change values. Afterward, they are added to the original image.
 
 
 ---

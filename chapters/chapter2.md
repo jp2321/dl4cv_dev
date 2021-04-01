@@ -49,7 +49,7 @@ This is not the correct answer
 
 Read the dog.jpeg image from disk. It is in the exercises folder.
 First, read it as a black and white image, second as a colored image.
-Display both image.
+Display both images.
 
 <codeblock id="02_02">
 
@@ -83,7 +83,7 @@ Remember that cv2 has the order of the channels BGR.
 <exercise id="9" title="Resizing of images">
 The resize command is used to change the size of the image. Instead of cropping image parts, through interpolation, the image size is changed.
 
-Resize the dog images from its original size to 50 by 50 pixels for the image. Use the rescale command from cv2 for this.
+Resize the dog image from its original size to 50 by 50 pixels. Use the rescale command from cv2 for this.
 
 <codeblock id="02_02_3">
     IMPORTANT: cv2 denotes the first parameter in the tuple as the width, the second as the height!
@@ -191,5 +191,5 @@ This is not the correct answer
 </exercise>
 
 <exercise id="16" title="Hands-on your turn">
-	Select some images that you like. Create a notebook (for example in Colab) and perform the reading of the image as black and white, colored images, edge detection, hog transformation, resizing, slicing and dicing etc. to practise your image preprocessing skills. Familiarize yourself the the documentation of CV2 and scikit-image.
+	Select some images that you like. Create a notebook (for example in Colab) and perform the reading of the image as black and white, colored images, edge detection, hog transformation, resizing, slicing and dicing etc. to practice your image preprocessing skills. Familiarize yourself with the documentation of CV2 and scikit-image.
 </exercise>

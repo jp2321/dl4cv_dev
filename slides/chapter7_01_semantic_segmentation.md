@@ -4,7 +4,7 @@ type: slides
 
 # Semantic Segmentation
 
-Note: There are several different segmentation tasks. In the course, we will focus on semantic segmentation. Semantic segmentation is the classification of each pixel belonging to a certain class or the background. Instance segmentation,  another form of segmentation is the classification of pixels belonging to an "instance" which is the combination of object detection and predicting to which object instance this pixel belongs.
+Note: There are several different segmentation tasks. In the course, we will focus on semantic segmentation. Semantic segmentation is the classification of each pixel belonging to a certain class or the background. Instance segmentation, another form of segmentation is the classification of pixels belonging to an "instance" which is the combination of object detection and predicting to which object instance this pixel belongs.
 
 ---
 
@@ -12,8 +12,8 @@ Note: There are several different segmentation tasks. In the course, we will foc
 
 <img src="vl6/img_seg.jpg" width="50%">
 
-Note: So far, in the course, we discovered different architectures of networks, we worked with multi-output models in object detection. For semantics segmentation, we will combine different techniques. The important difference between the previous chapters compared to segmentation is that the output of the network is an image itself. Therefore, image segmentation is one of numerous encoder-decoder tasks. The network performs an encoding of the original input to a different representation with a high abstraction of the information. The decoder part of the network transforms the representation to the output. Image segmentation is another vital technique for autonomous robotics and driving tasks. The street, sidewalk, pedestrians, etc. have to be distinguished so that the car can detect the street and where to drive. 
-For n different classes to segment, the label as n different channels, each indicating a different class. A one indicates that this pixel belongs to that class.
+Note: So far, in the course, we discovered different architectures of networks, we worked with multi-output models in object detection. For semantic segmentation, we will combine different techniques. The important difference between the previous chapters compared to segmentation is that the output of the network is an image itself. Therefore, image segmentation is one of numerous encoder-decoder tasks. The network performs an encoding of the original input to a different representation with a high abstraction of the information. The decoder part of the network transforms the representation to the output. Image segmentation is another vital technique for autonomous robotics and driving tasks. The street, sidewalk, pedestrians, etc. have to be distinguished so that the car can detect the street and where to drive. 
+For n different classes to segment, the label is reprsented with n different channels, each indicating a different class. A one at the i,j's position in the cth channel, indicates that this pixel (i,j) belongs to the cth class.
 
 ---
 
@@ -53,7 +53,7 @@ Source: Pound (2018)
 
 Source:  Long, Shelhamer & Darrell, 2015
 
-Note: The first algorithm applied for segmentation is thus called "fully convolutional network" and was published in 2015. The encoder is a normal CNN e.g. VGG. The decoder has 1 by 1 convolutions for predicting for each pixel the class label plus an upsampling layer to scale the prediction to the original size of the image. Different versions of the FCN exist, with some connecting layers between the encoder and decoder. In the original paper, a deconvolutional layer is used for the upsampling. However, we used here normal upsampling layer with bilinear interpolation. This technique can upsample the input by just duplicating the rows and columns (Long, Shelhamer & Darrell, 2015). 
+Note: The first algorithm applied for segmentation is thus called "fully convolutional network" and was published in 2015. The encoder is a normal CNN e.g. VGG. The decoder has 1 by 1 convolutions to predict the class label for each pixel and an upsampling layer to scale the prediction to the original size of the image. Different versions of the FCN exist, with some connecting layers between the encoder and decoder. In the original paper, a deconvolutional layer is used for the upsampling. However, we used the normal upsampling layer with bilinear interpolation here. This technique can upsample the input by just duplicating the rows and columns (Long, Shelhamer & Darrell, 2015). 
 
 
 ---
@@ -88,7 +88,7 @@ Source: Adams (2019a)
 
 Source: Ronneberger, Fischer & Brox, 2015
 
-Note: For the other often-used network, the U-Net, used in medicine, so-called deconvolutions are used. It is called U-Net because it looks like a U. The main characteristic is that some layers outputs from the encoder are copied and concatenated with layers in the encoder. 
+Note: For the other network architecture frequently used, the U-Net, so-called deconvolutions are applied. It is called U-Net because it looks like a U. The main characteristic is that some layers outputs from the encoder are copied and concatenated with layers in the encoder. The U-Net was originally developed for medical image segmentation, however is nowadays applied in a broad range of domains.
 
 ---
 
@@ -119,6 +119,8 @@ Source: Adams (2019b)
 - Pixel-wise accuracy
 - IoU
 
+Note: For evaluating the performance of image segmentation models, there are multiple possibilities. Two of them are pixel-wise accuracy and IoU, which are explained in the following slides.
+
 ---
 
 # Pixel-wise accuracy 
@@ -133,7 +135,7 @@ Percentage of pixel classified correctly in the image.
 
 Image source: (Tiu, 2019)
 
-Note: For evaluating the performance of image segmentation models, there are multiple possibilities. Two of them are pixel-wise accuracy and IoU. While pixel-wise accuracy is easy to understand as it is the mean accuracy of the predicted pixels per class, the major disadvantage of this evaluation method is that the scores are effected by class imbalances. In the segmenting example above, 5% of the pixels are showing a ship (colored blocks). The other 95% of the pixel does not belong to the ship class. Thus, an accuracy of 95% in the ship class would mean that actually, no ship is segmented as this is the baseline performance when predicting that there are no ships at all (and  all pixels are predicted to be background). 
+Note: While pixel-wise accuracy is easy to understand as it is the mean accuracy of the predicted pixels per class, the major disadvantage of this evaluation method is that the scores are affected by class imbalances. In the segmenting example above, 5% of the pixels are showing a ship (colored blocks). The other 95% of the pixel do not belong to the ship class. Thus, an accuracy of 95% in the ship class would mean that actually, no ship is segmented as this is the baseline performance when predicting that there are no ships at all (and  all pixels are predicted to be background). 
 
 A prediction would than look like this
 
@@ -145,10 +147,11 @@ A prediction would than look like this
 
 # IoU
 
-- Intersection over union also known as Jaccard Index measure the overlap of the predicted segmentation and the ground truth over the by the area of the predicted segmentation and the ground truth.
+- Intersection over union (Jaccard Index) measures the overlap of the predicted segmentation and the ground truth devided by the total area of union.
+
 
 <img src="vl6/iou_equation.png" width=500 height=500>
-
+<br>
 <img src="vl6/iou_formula.png">
 
 

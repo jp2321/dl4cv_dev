@@ -18,7 +18,7 @@ id: 3
 <exercise id="18" title="Questions about neural networks">
 <choice id=1>
 
-<opt text="Were inspired by the human brain" correct="true">
+<opt text="Neural networks were inspired by the human brain" correct="true">
 
 Correct!
 
@@ -94,7 +94,7 @@ Correct!
 
 </opt>
 
-<opt text="Dropout increase the risk of overfitting">
+<opt text="Dropout increases the risk of overfitting">
 
 This is not the correct answer
 
@@ -108,7 +108,7 @@ Correct!
 
 </opt>
 
-<opt text="Dropout deletes completley neurons from the network">
+<opt text="Dropout deletes neurons from the network">
 
 This is not the correct answer
 
@@ -133,7 +133,7 @@ This is not the correct answer
 </exercise>
 
 <exercise id="24" title="Play with the code III">
-	Use the provided notebook and try out different settings for the Dense Neural network. Vary the number of hidden layers, the number of perceptrons per layer, activation functions, learning rates, batch sizes. What do you notice? Compare the performance to the ML Models with HOG/Edge Detection?
+	Use the provided notebook and try out different settings for the Dense Neural network. Vary the number of hidden layers, the number of perceptrons per layer, activation functions, learning rates, batch sizes. What do you notice? Compare the performance to the ML Models with HOG/Edge Detection
 </exercise>
 
 <exercise id="25" title="Play with the code IV">

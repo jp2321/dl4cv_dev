@@ -8,7 +8,7 @@ type: slides
 
 # Motivation
 
-- Extract generalizable knowledge to another task or domain
+- Apply generalizable knowledge to another task or domain
     
 - Anaology in the real world:
 
@@ -20,7 +20,7 @@ type: slides
 - Few observations in the target domain
 - Task is very new
 
-Note: Most of the architectures described above are getting famous by being used in Transfer Learning. Transfer Learning thereby describes the process of transferring knowledge from one domain or task to another and reuse parts of a trained model. The overall aim is to boost performance when a) fewer observations are in the target domain and training a machine learning model is not possible or b) the task is very new, and thus no data is available. 
+Note: Most of the architectures described above got famous by being used in Transfer Learning. Transfer Learning thereby describes the process of transferring knowledge from one domain or task to another and reuse parts of a trained model. The overall aim is to boost performance when a) fewer observations are in the target domain and training a machine learning model is not possible or b) the task is very new, and thus no data is available. 
 
 ---
 

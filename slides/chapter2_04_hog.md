@@ -8,10 +8,10 @@ type: slides
 
 # HoG
 
-- by Dalal & Triggs (2005)
-- purpose: Detecting human detection in images
+- By Dalal & Triggs (2005)
+- Original purpose: Detecting humans in images
 - Some similarities to Canny Edge Detector in the image preprocessing
-- Aim: Describe with a histogram the image as accurately as possible
+- Aim: Describe the image as accurately as possible with a histogram
 - Works for B&W and color images
 - Can be used as a feature extractor to use in a ML pipeline
 
@@ -44,36 +44,36 @@ Note: This video explains very well, what HoG is
 # Block normalization
 
 <img src="vl1/hog-16x16-block-normalization.gif" alt="This image is in /static" width="30%">
+Image source: Malkik, (2016)
 
-Note:
-Image source: Mallik, (2016)
-
---- 
+Note: Each green square represent a cells for which a histogram is calculated.
+The blue square reprents a block - the area of cells with are normalized together
 
 
-# Design decisions
-
+---
+# Design choices
 - how many bins has the histogram?
 - how large is the cell
 - how many cells are used to build a block 
 
 
-Note: Cell: Area for which the histogram is calculated
-Block: How many cells are considered for normalization
-Bins: How many discrete categorize are in the histogram?
+Note: Cell: Area for which the histogram is calculated <br>
+Block: Number of cells which are considered for normalization <br>
+Bins: Number of discrete categories (bins) in the histogram <br>
 
 ---
 
 # HoG in Python
 
 ```python
-image = cv2.imread("exercises/burger.jpeg", 0)
-resize_img = cv2.resize(image, (150,150))
+image = cv2.imread("exercises/burger.jpeg", 0) # Read images
+resize_img = cv2.resize(image, (150,150)) # Resize the image
 
+# Apply HOG with a cell size of 16 by 16, normalization is only performed with in the bloxk and the histogram has 9 bins.
 fd, hog_image = hog(resize_img, orientations=9, pixels_per_cell=(16, 16),
                     cells_per_block=(1, 1), visualize=True, multichannel=False)
 
-print(fd.shape)
+print(fd.shape) # Print shape of the HOG transformed image
 
 # Plot histogram
 plt.plot(fd)
@@ -97,12 +97,16 @@ plt.show()
 # Output images 
 
 <img src="vl1/histogram.png" alt="This image is in /static" width="25%">
-
 <img src="vl1/burger_hog.png" alt="This image is in /static" width="25%">
+
+Note: The first image represents the histogram of the transformed image. We can see how the normalized magnitudes change from cell to cell.
+The second image visualizes the orientation and magnitude of the gradients for the burger image. 
 
 ---
 
 <html>
+<h3> Refereces </h3>
+
 <list>
     <li>
         Ahmed, R. (2018). Computer Vision with OpenCV: HOG Features Extraction. Retrieved from: https://www.youtube.com/watch?v=4ESLTAd3IOM

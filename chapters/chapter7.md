@@ -75,6 +75,6 @@ Perfect!
 </exercise>
 
 <exercise id="52" title="Playing with the code - Image Segmentation">
-a) Try to improve the existing solutions in the notebook
-b) Find a semantic segemntation dataset on your own and test FCN vs U-Net
+a) Try to improve the existing solutions in the notebook <br>
+b) Find a semantic segmentation dataset on your own and test FCN vs U-Net
 </exercise>

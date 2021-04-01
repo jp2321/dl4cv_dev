@@ -43,7 +43,7 @@ In the course, we will discover different libraries used for image preprocessing
 
 CV2 is a library which can be used in C, Python, and Java for image preprocessing
 
-Scikit-image another well-known library for preprocessing in Python
+Scikit-image is another well-known library for preprocessing in Python
 
 Note: CV2 per default displays colored images, not in RGB but BGR. Thus the channels are changed. For displaying the cv2 read images in the correct color schema, a transformation is needed. We will discover this in the following coding exercises.
 

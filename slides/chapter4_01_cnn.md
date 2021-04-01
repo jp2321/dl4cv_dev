@@ -17,7 +17,9 @@ Dense nets are great at recognizing global patterns but fail to discover local p
 <br>
 Source: Raschka & Mirjalili, 2019, Vasilev, (2019)
 
-Notes: Convolutional neural networks were introduced in 1989 by LeCun et al. Neural networks containing only dense layers can be applied to image data; however, there are serval disadvantages. When the flattened image is used as the input, the hidden layers of a fully connected network connect to each pixel. However, the same pixel in different images mostly do not belong to the same "object" but are weighted as they would be. Thus, there is a dense connectivity. Moreover, objects or pixels belonging to the same "object" but with different places in the network might get weighted differently. A CNN has the advantage that sparse connectivity exists, meaning that local pixels are connected and weighted together, and that same weights are used for different patches of the image (parameter sharing), they are much more suitable to use in CV. Moreover, when images have large dimensions, dense neural networks are insufficient to train because of the large input vector (LeCun et al, 1990, Raschka & Mirjalili, 2019, Vasilev, 2019). 
+Notes: Convolutional neural networks were introduced in 1989 by LeCun et al.
+
+Neural networks containing only dense layers can be applied to image data; however, there are several disadvantages. When the flattened image is used as the input, the input layer of a fully connected network connects to each pixel. Although the same pixel in different images mostly does not belong to the same "object", the respective pixel always gets the same weight over all images. This is called a dense connectivity. Consequently, pixels belonging to the same "object" but with different places in the network might get weighted differently. Moreover, when images have large dimensions, dense neural networks are insufficient to train because of the large input vector which results in numerous weights due to the dense connectivity. This makes it computationally infeasable to fit to the existing resources. In contrast, a CNN, using convolutional layers instead of only dense layers, has the advantage that sparse connectivity exists. This means that local pixels are connected and weighted together, and that same weights are used for different patches of the image (parameter sharing). As a result, they are much more suitable to use in CV (LeCun et al, 1990, Raschka & Mirjalili, 2019, Vasilev, 2019). 
 
 ---
 
@@ -27,7 +29,7 @@ Notes: Convolutional neural networks were introduced in 1989 by LeCun et al. Neu
 
 Source: Saha, 2018
 
-Notes: Depicted in the figure is a Convolutional neural network. In the next slides, a detailed look at the building blocks of a CNN is made. First of all the question arises, what is a convolution?
+Notes: The figure shows a convolutional neural network. In the next slides, we will take a detailed look at the building blocks of a CNN. First the question arises, what is a convolution?
 
 ---
 
@@ -41,7 +43,7 @@ Notes: Depicted in the figure is a Convolutional neural network. In the next sli
 - Convolved feature is a new representation of the image <br>
 Source: Saha (2018)
 
-Note: A convolutional kernel thereby is a matrix of n x m, which is sled over the image. In mathematical terms, matrix multiplication is performed, and the input matrix is filtered for different objects. In the bottom layers of the network, these might be dot and edges, which are combined in the top layers to more complex shapes. The weights of the matrix are learned by backpropagation. A matrix containing positive weights in the first row and negative weights in the last row, for example, is filtering for horizontal edges (see Edge Detection). A kernel is applied to each channel of the image representation. The combined kernels are called a filter. Each convolutional layer consists of multiple filters. The parameters which need to be chosen on are the size of the kernel, the number of filters per layer, the stride size (how far is a kernel sled), the type of padding, and the activation function (Raschka & Mirjalili, 2019).
+Note: A convolutional kernel thereby is a matrix of n x m, which is sled over the image. In mathematical terms, matrix multiplication is performed, and the input matrix is filtered for different objects. In the bottom layers of the network, these might be dots and edges, which are combined to more complex shapes in the top layers. The weights of the matrix are learned by backpropagation. A matrix containing positive weights in the first row and negative weights in the last row, for example, is filtering for horizontal edges (see Edge Detection). A kernel is applied to each channel of the image representation. The combined kernels are called a filter. Each convolutional layer consists of multiple filters. The parameters which need to be selected on are the size of the kernel, the number of filters per layer, the stride size (how far is a kernel sled), the type of padding, and the activation function (Raschka & Mirjalili, 2019).
 
 
 ---
@@ -58,16 +60,16 @@ Note: You can click on the link and try out different kernels on the image
 
 Kernel size:
 - Shape of filter
-- Often used 3x3, 5x5, 7x7
+- Often used: 3x3, 5x5, 7x7
 
 Stride size:
 - Slide length
-- Often used 1 or 2
+- Often used: 1 or 2
 
 Padding:
-- Kernel strictly applied in the image slide?
-- Same: The convolved feature has the same size as input; Input is extended with zeros
-- Valid: Kernel only applied in image; Outputsize smaller
+- Is Kernel strictly applied in the image slide?
+- Same padding: The convolved feature has the same size as input; Input image is extended with zeros so that kernel can slide over the edge of the image.
+- Valid padding: Kernel only applied within image. This results in a smaller output representation.
 
 Source: Saha (2018)
 
@@ -82,7 +84,7 @@ Activation function:
 <img src="vl3/padding.gif" alt="This image is in /static" width="20%">
 Source: Saha (2018)
 
-Note: Moreover, we can apply different activation functions to the convoled image. 
+Note: Moreover, we can apply different activation functions to the convolved image. 
 This image in the slides shows the same padding. It can be clearly seen that the kernel is going over the edge of the image and the image is extended with zeros. The original input (blue) has exactly the same dimensions as the output (green) -> "same pooling".
 
 ---
@@ -94,12 +96,12 @@ This image in the slides shows the same padding. It can be clearly seen that the
 Source: Saha (2018)
 
 Note: The given concepts can also be extended to multiple channels.
-Now each filter exists of multiple kernels added together.
+Now each filter consists of multiple kernels added together.
 
 The convolutions of the second convolutional layer are the combination of the convolved output of the first layer.
 Compared to the image above:
 
-Instead of having for example 3 channels (R,G,B), the output of the first convolution may have 16,32 or 128 or many more channels. For each filter of the first convolutional layer, there is one channel output. In the second convolutional layer, these are filtered accordingly, with a kernel for each channel and added up to build one filter/output of the second convolutional layer.
+Instead of having for example 3 channels (R,G,B), the output of the first convolution may have 16,32 or 128 or many more channels. For each filter of the first convolutional layer, there is one channel output. In the second convolutional layer, these are filtered accordingly. For each channel, a kernel is applied and added up together to build one filter/output of the second convolutional layer.
 
 ---
 
@@ -121,7 +123,7 @@ Note: This video explains very well how a CNN works.
 
 Source: Raschka & Mirjalili, 2019
 
-Note: The second important operation in a Convolutional Network is called pooling. There are three types of pooling, namely max pooling, average pooling, and global (max or average) pooling. The aim is to make the algorithm invariant to local changes. Thus neighboring pixels are treated as one area. In a max-pooling operation, the maximum activation for each area is taken, for average pooling, the average pixel value is used. The advantage of the pooling operations is that they also reduce the input size; thus, the computation gets also more efficient. Global pooling is not extracting the maximum or average pixel value for image sub-regions but for the whole input. It can be used instead of a flatten layer to connect the multi-dimensional convolutional layers to fully connected layers (Raschka & Mirjalili, 2019). Similar to the convolutional hyperparameters, the parameters for pooling are the pooling size, stride size, and padding. A global pooling, as seen on the next slide, is just a special pooling with the size of the input size. Thus, each channel is reduced to one number/scalar.
+Note: The second important operation in a Convolutional Network is called pooling. There are three types of pooling, namely max pooling, average pooling, and global (max or average) pooling. The aim is to make the algorithm invariant to local changes. Thus neighboring pixels are treated as one area. In a max-pooling operation, the maximum pixel value is taken for the region, for average pooling, the average pixel value is used. The advantage of the pooling operations is that they also reduce the input size; thus, the computation gets also more efficient. Global pooling is not extracting the maximum or average pixel value for image sub-regions but for the whole input. It can be used instead of a flatten layer to connect the multi-dimensional convolutional layers to fully connected layers (Raschka & Mirjalili, 2019). Similar to the convolutional hyperparameters, the parameters for pooling are the pooling size, stride size, and padding. A global pooling, as seen on the next slide, is just a special pooling with the size of the input size. Thus, each channel is reduced to one number/scalar.
 
 ---
 
@@ -133,7 +135,7 @@ Image source: https://peltarion.com/knowledge-center/documentation/modeling-view
 
 Note: A flatten layer, or global pooling needs to be used to connect the multi-dimensional convolution to the fully connected layers, which only takes one-dimensional inputs.
 Do you remember the reshaping of the image? The same is done in the flatten command. The convoluted output is "flattened" into a list/vector.
-Using a global pooling has the advantage that the number of parameters in the network are less as the output is summarized in one number instead in a list of pixels with the length of width x height x channels of the last convolutional layer.
+Using a global pooling has the advantage that it decreases the number of parameters in the network. While the global pooling summarizes the image in a list with length n, where n are the number of channels in the last convolutional layer, a flatten layer would have the shape of width x height x channels.
 
 ---
 

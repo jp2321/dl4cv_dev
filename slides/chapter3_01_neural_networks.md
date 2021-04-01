@@ -13,14 +13,14 @@ Historical development
 - Theoretical development in the 1940s by McCulloch and Pitt
 - Similarity to the human brain
 - Fundamental method: Perceptron (Rosenblatt, 1958)
-- AI Winter
+- AI Winter between 1974-1980 and 1987-1993
 - Backpropagation 1986s 
 
 Advantage of Deep Learning: Multiple non-linear transformations 
 
 Source: Raschka & Mirjalili (2019), Rosenblatt (1958),  Rumelhart et al., (1986)
 
-Notes: The idea of building an artifical object similar to the human brain that can learn somethings dates back to the ideas of McCulloch and Pitt in the 1940s. The fundamental method is a perceptron, developed by Rosenblatt in 1958. Mathematically speaking, it is the weighted sum of the inputs used in a non-linear mathematical function to map some output. In the AI Winter, the technology was not extensively researched as computational costs were high, and other machine learning algorithms performed better. This changed with the development of backpropagation in 1986, which is used until today to train a neural network. Neural networks got in the last years again attention as with the increasing computing power, and the usage of Graphical processing units (GPUs), more complex neural networks could be trained with almost human performance or surpassing it in some applications. The advantage compared to classical machine learning algorithms are that deep learning models can model complex non-linear relationships between input and output to increase the prediction performance.
+Notes: The idea of building an artifical object similar to the human brain that can learn somethings dates back to the ideas of McCulloch and Pitt in the 1940s. The fundamental method is a perceptron, developed by Rosenblatt in 1958. Mathematically speaking, it is the weighted sum of the inputs used in a non-linear mathematical function to map some output. In the AI Winter, the technology was not extensively researched as computational costs were high, and other machine learning algorithms performed better. The concept of AI was questioned from many researchers and practioners as the expected results could not be reached and the term seemed overhyped. Moreover a lot of companies from the AI Industrie collapsed. A huge step forward was made by development of backpropagation in 1986, which is used until today to train a neural network. Neural networks got in the last years again attention as with the increasing computing power, and the usage of Graphical processing units (GPUs), more complex neural networks could be trained with almost human performance or surpassing it in some applications. The advantage compared to classical machine learning algorithms are that deep learning models can model complex non-linear relationships between input and output to increase the prediction performance.
 
 ---
 
@@ -76,7 +76,7 @@ Also, the output layer uses all the inputs from the previous hidden layer weight
 Source: Raschka & Mirjalili (2019)
 
 Note: While the feed-forward process is just the pass from inputs to predictions, this process helps the neural network to learn. Backpropagation was introduced in 1986 by Rumelhart et al. and is mostly used to train the neural network. The essential idea is that the weights should be optimized so that the loss function and the error are minimized. First of all, the error is calculated by comparing the prediction with the truth. This is the error term of the output layer. The gradients of the loss function are calculated. By gradient descent, the direction in which the weights of the output layer need to be optimized is calculated. The error of the hidden layer is the error of the output weighted by the weight it had for the output layer with respect to its change in activation of the hidden layer. Again the gradients are calculated with respect to the hidden layer, and by gradient descent, the direction in which the weights are updated is obtained. This is done until the input layer is reached.
-In the final step, the updated weights of the network are the weights bevor the weight update plus a small step into the update direction. The small step is the learning rate. (The mathematical formula of the update rule was already discussed in the previous slides).
+In the final step, the updated weights of the network are the weights before the weight update plus a small step into the update direction. The small step is the learning rate. (The mathematical formula of the update rule was already discussed in the previous slides).
 
 ---
 
@@ -94,9 +94,9 @@ The other extreme is stochastic gradient descent. The weights are updated after 
 
 Thus, most often mini-batch stochastic gradient is used, where after for each mini-batch, for example, 32 samples, the weights are updated.
 
-Epochs are the number of passes through the whole training set. In other words, a epoch is one round of training. Neuronal networks need many "rounds" of training, until the weights are adjusted. There is no clear number of how many epochs are necessary, as the update frequency of the weights (gradient descent, mini-batch gradient descent, stochastic gradient descent), the strength of the update (learning rate), the complexity of the problem and many more factors influnece the optimal number. Often an so called early-stopping is applied, so the training stops, when no significant performance increase can be reached to prevent the network from overfitting.
+Epochs are the number of passes through the whole training set. In other words, an epoch is one round of training. Neuronal networks need many "rounds" of training, until the weights are adjusted. There is no clear number of how many epochs are necessary, as the update frequency of the weights (gradient descent, mini-batch gradient descent, stochastic gradient descent), the strength of the update (learning rate), the complexity of the problem and many more factors influnece the optimal number. Often a so called early-stopping is applied, so the training stops, when no significant performance increase can be reached to prevent the network from overfitting.
 
-Modern deep learning models use often other methods for optimization. The Adam optimizer is a well known and used alternative, which uses instead of one single fixed learning rate for the whole model as in stochastic/mini-batch gradient descent (SGD), a learning rate for each parameter, which is adapted/changed during the learning process. It therefore combines the advantage of AdaGrad and RMSPop optimizers. This course will often choose Adam because of the fast convergence of the algorithm and consequently less epochs needed in training.
+Modern deep learning models use often other methods for optimization. The Adam optimizer is a well known and used alternative. While stochastic/mini-batch gradient descent (SGD) uses one learning rate for the whole model, Adam uses a learning rate for each parameter. Morevoer, the learning is adapted during the learning process. It therefore combines the advantage of AdaGrad and RMSPop optimizers. This course will often choose Adam because of the fast convergence of the algorithm and consequently less epochs needed in training.
 
 We will not have a deeper discussion of optimizers in this course, however, if you are interested, the further readings give more details:
 
@@ -128,11 +128,11 @@ linear: regression problems
 
 The softmax function is a special case of the sigmoid, so that the probabilities are not per output neuron but distributed over all output neurons to mimic the one-hot encoded vector. 
 
-A list of different activation function and their mathematical properties can be found here: <a href="https://www.tensorflow.org/api_docs/python/tf/keras/activations" target="blank">keras activation functions</a> and <a href="https://en.wikipedia.org/wiki/Activation_function" target="blank">Wikipedia</a> or <a href="https://towardsdatascience.com/complete-guide-of-activation-functions-34076e95d044" target="blank">here</a>
+A list of different activation functions and their mathematical properties can be found here: <a href="https://www.tensorflow.org/api_docs/python/tf/keras/activations" target="blank">keras activation functions</a> and <a href="https://en.wikipedia.org/wiki/Activation_function" target="blank">Wikipedia</a> or <a href="https://towardsdatascience.com/complete-guide-of-activation-functions-34076e95d044" target="blank">here</a>
 
 ---
 
-# Loss function
+# Loss function I 
 
 - Neuronal networks are framed as an optimization problem
 - Using Maximum Likelihood estimation
@@ -141,16 +141,27 @@ Loss functions that are often used:
 
 Classifcation problems: cross-entropy
 
-<img src="vl2/cross_entropy.png">
-
-Regression problem: Mean squared error
+<img src="vl2/cross_entropy.png" width="35%">
 
 Source: Brownlee, 2019.
 
 Note: The loss function describes mathematically the errors in the optimization problem. 
-The goal is to minimze the loss functions, so that predictions and target values are as close as possible. Neural network use the maximum likelihood theorem that finds the optimum parameter values (weights), given an input to fit the data distribution of the target as close a possible based on the training data. For classification often the loss functions cross-entropy is used that minimizes the difference between the predicted class probability and the true class probability. As we know for the training data to which class the observations belongs and to which classes not, these are labeled with 1 respecitly with 0. The loss function for regression problems is the mean squared difference between the prediction and the true value, also known as mean squared error. However, there are many more loss functions like: mean absolute deviation for regression or hinge loss for classification.
+The goal is to minimze the loss functions, so that predictions and target values are as close as possible. Neural networks use the maximum likelihood theorem that finds the optimum parameter values (weights), given an input to fit the data distribution of the target as close a possible based on the training data. For classification problems often the loss functions cross-entropy is used that minimizes the difference between the predicted class probability and the true class probability. The categorical cross-entropy measures the average number of bits that have to be changed in order to get from one distribution to the other. 
 
+---
 
+# Loss function II 
+
+Regression problem: Mean squared error
+
+<img src="vl2/mae.png" width="30%">
+
+Source: Brownlee, 2019.
+
+Note: The loss function for regression problems is the mean squared difference between the prediction and the true value, also known as mean squared error. 
+
+However, there are many more loss functions like: mean absolute deviation for regression or hinge loss for classification.
+Tensorflow gives also the possibility to combine loss functions. Therefore a function needs to be coded, that adds, weights or combines the pre-defined loss functions.
 
 ---
 
@@ -176,7 +187,7 @@ Note: This course will use Googles Tensorflow library for deep learning. Tensorf
 
 # How to use images in a dense neural network
 
-As dense neural networks can not use a multidimensional array as an input, first, the images need to be transformed into a flat vector representation for learning. Thus, instead of height and width, the image is now a list of pixels starting from the first pixel to the last. Each input neuron will match one of these pixels.
+As dense neural networks cannot use a multidimensional array as an input, first, the images need to be transformed into a flat vector representation for learning. Thus, instead of height and width, the image is now a list of pixels starting from the first pixel to the last. Each input neuron will match one of these pixels.
 
 ```python
 print(X_train.shape) # the original dataset size
@@ -210,8 +221,7 @@ def simple_model():
     return m
 ```
 
-Note: For the hidden layer, relu activations are used for the output layer sigmoid activations as there is just one class. In this course, we will use the functional API of Keras. Instead of the sequential API where layers can be stacked, we can create more complex architectures with the functional API. To connect two layers, create the layer with calling one layer type from the layers package and add the previous layer where it should connect in the brackets after the call
-In the example in the slides, you can see that the hidden layer is first defined and than connected to the input_layer. 
+Note: Relu activations are used for the hidden layer, while sigmoid activations are used for the output layer, as there is just a single label per image. In this course, we will use the functional API of Keras. Instead of the sequential API where layers can be stacked, we can create more complex architectures with the functional API. To connect a layer to the previous layer, the previous layer is called in breackets after the commands for the current layer. In the example in the slides, you can see that the hidden layer is first defined and than connected to the input_layer. 
 
 ---
 
@@ -240,9 +250,9 @@ _________________________________________________________________
 
 ```
 
-Note: There are 784 inputs, 20 neurons in the hidden unit and 1 output neuron classifying if the image belongs to the target category or not
+Note: There are 784 inputs, 20 neurons in the hidden unit and 1 output neuron, that classifies whether the image belongs to the target category or not.
 
-By calling the fit method, the network could be trained. 
+By calling the fit method, the network can be trained. 
 
 ---
 

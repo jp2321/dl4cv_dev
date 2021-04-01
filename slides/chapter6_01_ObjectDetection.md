@@ -92,7 +92,7 @@ Note: R-CNN was the first well-performing object detection method. Via selective
 
 - CNN used to create convolutional features
 - Interesting areas are identified by selective search
-- Fully Connected layers of classification and regression
+- Fully Connected layers perform a classification (Object Classification) and a regression (Bounding Box)
 
 <img src="vl5/fast_rcnn.png" width="50%">
 
@@ -107,7 +107,7 @@ Note: Thus, R-CNN was improved, and Fast R-CNN was developed. While the overall 
 
 - CNN used to create convolutional features
 - Regional Proposal Network (RPN) identified regions
-- Proposals are classification and regression
+- Proposals used by fully connected layers to perform a classification (Object Classification) and a regression (Bounding Box)
 
 <img src="vl5/faster_rcnn.png" width="30%">
 
@@ -130,7 +130,7 @@ Note: While Fast R-CNN is faster than R-CNN, it might not be fast enough, so Fas
 
 Image source: Ghandi, 2018
 
-Note: Yolo is up to now the fastest method for object detection. As it is built on just one neural network, different assumptions need to be made. First, the image is divided into an S by S grid. In each grid, m objects can be found. On each grid, the CNN is applied with the output of m times the 5+n output vector. The Anchorboxes are in a 1 to m relationship so that each object belongs to one anchor box (which can be spread over multiple grids). However, each grid has maximum of m objects. It is with less than 1 second per image the fasted object detection methods (Vasilev, 2019).
+Note: Yolo is up to now the fastest method for object detection. As it is built on just one neural network, different assumptions need to be made. First, the image is divided into an S by S grid. In each grid, m objects can be found. On each grid, the CNN is applied with the output of m times the 5+n output vector. The Anchorboxes are in a 1 to m relationship so that each object belongs to one anchor box (which can be spread over multiple grids). However, each grid has maximum of m objects. It is with less than 1 second per image the fastest object detection methods (Vasilev, 2019).
 
 ---
 
@@ -144,7 +144,7 @@ Note: Yolo is up to now the fastest method for object detection. As it is built 
 
 Source: Rosenbrock, 2016
 
-Note: For the described methods, the IoU concept is used to denoise the predictions. IoU stands for intersection over union, where for all the derived object predictions, the area of overlap is divided by the area of union. Most of the time, a fixed threshold, for example, 0.5, is applied, discarding all the predicted bounding boxes and detection above the threshold. This deletes multiple detections of the same object (Rosenbrock, 2016, Vasilev, 2019). This is also often known as non-max suppression. In the image in the slides, one bounding box is the prediction, the other box is the ground truth.
+Note: For the described methods, the IoU concept is used to denoise the predictions. IoU stands for intersection over union, where for all the derived object predictions, the area of overlap is divided by the area of union. Most of the time, a fixed threshold, for example, 0.5, is applied, discarding all the predicted bounding boxes and detection above the threshold. This deletes multiple detections of the same object (Rosenbrock, 2016, Vasilev, 2019). This is also often known as non-max suppression. In the image in the slide, one blue bounding box is the prediction, the other blue box is the ground truth.
 
 IoU is not only used for the non-max suppression in the prediction but can also be used as a performance measure for the bounding box regression. It is extremely difficult to predict the bounding box and interpret the performance as a regression problem. The IoU states, how well the predicted bounding box overlaps with the ground truth labeled bounding box and thus combines the performance for the bounding box in one number (Ganesh, 2019).
 

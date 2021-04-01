@@ -23,9 +23,9 @@ The two learned parameters, gamma and beta restore the representation power. Gam
 
 The original idea was that it reduces the internal covariate shift. This phenomenon describes the shift of the activation output of the previous layer due to weight updates. As a consequence, the preceding layer has a differently scaled input, which might result in a sizeable change of the weights in the next mini-batch or epoch. This effect makes learning very unstable. Current research finds very little evidence that batch normalization reduces internal covariate shift, and the reason why it works is highly discussed. For further readings, see <a href="https://arxiv.org/pdf/1805.11604.pdf" target="blank">here</a> and <a href="https://arxiv.org/abs/1805.10694" target="blank">here</a> . Nevertheless, batch normalization is very helpful in improving the stability of the learning process.
 
-Often you choose Batch Norm or Dropout for the network. There is some evidence that when both are applied, learning can be effected negativly. 
+Often you choose Batch Norm or Dropout for the network. There is some evidence that when both are applied, learning can be effected negatively. 
 
-The mathematical description is out of the scope this this course, however, for information and completness see <a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Li_Understanding_the_Disharmony_Between_Dropout_and_Batch_Normalization_by_Variance_CVPR_2019_paper.html"> Li et al.</a>
+The mathematical description is out of the scope of this this course, however, for information and completeness see <a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Li_Understanding_the_Disharmony_Between_Dropout_and_Batch_Normalization_by_Variance_CVPR_2019_paper.html"> Li et al.</a>
 
 ---
 

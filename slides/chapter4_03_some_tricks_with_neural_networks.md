@@ -61,9 +61,9 @@ def transform_function(filename, label):
 ```
 
 
-Note: It is not convenient to read first all the data into memory, preprocess it, and use it than for training. First of all, this often requires large machines with large RAM. Secondly, if loading just one batch at the time, not the full power of the GPU can be used, as the GPU might wait for the batch to be prepared or passed to the GPU.
+Note: It is inconvenient to read first all the data into memory, preprocess it, and use it than for training. First of all, this often requires large machines with large RAM. Secondly, if loading just one batch at the time, the GPU might wait for the batch to be prepared or passed to the GPU, which reduces the utlization of the GPU.
 
-Using tensorflow pipelines mitigate these two downsides. In the example above, a sample pipeline is built. The dataset object can be normally passed to the fit function of the model.
+Using tensorflow pipelines mitigates these two downsides. In the example above, a sample pipeline is built. The dataset object can be normally passed to the fit function of the model.
 
 For more information about data piplines see <a href="https://www.tensorflow.org/guide/data_performance">here</a>, <a href="https://towardsdatascience.com/building-efficient-data-pipelines-using-tensorflow-8f647f03b4ce">here</a> and <a href="https://cs230.stanford.edu/blog/datapipeline/"> here </a>.
 
@@ -81,7 +81,9 @@ batch_size=64 # define a batch size
 # create tensorf and input the files list files_ and the one hot encoded labels c_categorical
 dataset = tf.data.Dataset.from_tensor_slices((files_,c_categorical))
 
-dataset = dataset.shuffle(len(files_)) # shuffel the data
+dataset = dataset.shuffle(3000) # shuffel the data with a buffer size of 3000
+#For using the complete dataset for each shuffle use len(files), which equals a perfect shuffle
+#Note: This might be not possible with limited hardware, therefore a smaller buffer size maintaines a shuffle
 
 dataset = dataset.map(transform_function, num_parallel_calls=4) # transform data
 # 4 threads are used
@@ -121,7 +123,7 @@ parameters = number_of_filters * (input_channel x kernelsize + 1)
 
 Source: Zhang, 2017
 
-Note: For the dense layer, each output of the subsequent layer is connected to all neurons in the next layer. The +1 in the formula accounts for the bias each neuron has. For the parameters of the convolutional layer also the plus one accounts for the bias of each filter. The kernel size here is the kernel width multiplied by the kernel height.
+Note: For the dense layer, each output of the subsequent layer is connected to all neurons in the next layer. The +1 in the formula accounts for the bias each neuron has. The convolutional layer has similar to the dense layer also a bias term for each kernel (also denote with the +1 in the formula). The kernel size here is the kernel width multiplied by the kernel height.
 
 ---
 
@@ -134,7 +136,7 @@ Source: Becker (2018)
 
 Note: There is a debate going on if pooling should be replaced by strides. 
 Many networks are using pooling - this is more the "historic way".
-New network architecture (we will discuss them next week) are replacing these with strides
+New network architectures replace the pooling with strides; We will discuss them next week...
 
 ---
 

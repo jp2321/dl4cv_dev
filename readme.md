@@ -1,4 +1,4 @@
-# M.184.5334 Deep Learning for Computer Vision | Summer semester 2020 
+# M.184.5334 Deep Learning for Computer Vision | Summer semester 2021 
 
 This is the python course used in the Deep Learning for Computer Vision class.
 

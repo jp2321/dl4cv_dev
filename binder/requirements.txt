@@ -2,6 +2,6 @@ wasabi>=0.2.1,<1.1.0
 numpy
 matplotlib
 pandas
-opencv-python
+opencv-python==3.4.13
 tensorflow
 scikit-image
